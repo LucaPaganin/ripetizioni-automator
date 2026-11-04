@@ -35,9 +35,14 @@ jobs:
 
       - run: pip install -r pipeline/requirements.txt
 
+      # Credenziali GCP a vita breve via OIDC (Workload Identity Federation): nessuna chiave JSON.
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+
       - name: Trascrivi PDF nuovi
         env:
-          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           DRIVE_ROOT_ID: ${{ vars.DRIVE_ROOT_ID }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}

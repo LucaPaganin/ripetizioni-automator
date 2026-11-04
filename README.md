@@ -11,11 +11,13 @@ Lo stato dei file già elaborati è in `pipeline/state.json`: un PDF viene ritra
 
 ## Setup (una tantum, ~15 minuti)
 
-### 1. Service account Google (lettura Drive)
+### 1. Accesso a Drive senza chiavi (Workload Identity Federation)
 
-1. [console.cloud.google.com](https://console.cloud.google.com) → nuovo progetto → abilita **Google Drive API**.
-2. *IAM e amministrazione → Account di servizio* → crea → *Chiavi* → aggiungi chiave JSON → scarica.
-3. Su Drive, condividi la cartella **Classroom** con l'email della service account (`…@….iam.gserviceaccount.com`) come **Visualizzatore**.
+La GitHub Action ottiene credenziali GCP a vita breve via OIDC e impersona una service account: nessuna chiave JSON da custodire o ruotare, e solo i workflow di questo repo sono autorizzati.
+
+1. [console.cloud.google.com](https://console.cloud.google.com) → crea un progetto → apri **Cloud Shell** (icona `>_`).
+2. Carica `pipeline/gcp-setup.sh` e lancia `bash gcp-setup.sh <PROJECT_ID> <owner/repo>`.
+3. Lo script stampa l'email della service account (da condividere su Drive come **Visualizzatore** sulla cartella **Classroom**) e i valori delle variabili GitHub.
 
 ### 2. Chiave Gemini
 
@@ -25,9 +27,9 @@ Nota: sul free tier Google può usare i contenuti inviati per migliorare i propr
 ### 3. Repository GitHub
 
 - **Secrets** (*Settings → Secrets and variables → Actions*):
-  - `GDRIVE_SA_JSON`: contenuto intero del JSON della service account
   - `GEMINI_API_KEY`
 - **Variables**:
+  - `GCP_WIF_PROVIDER`, `GCP_SERVICE_ACCOUNT`: stampati da `gcp-setup.sh`
   - `DRIVE_ROOT_ID`: ID della cartella Classroom (dall'URL `drive.google.com/drive/folders/<ID>`)
   - `GEMINI_MODEL` (facoltativo, default `gemini-2.5-flash`)
 - *Settings → Pages → Source*: **GitHub Actions**.

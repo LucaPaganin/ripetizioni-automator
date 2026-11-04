@@ -6,7 +6,7 @@ Struttura attesa su Drive:
 Le cartelle che iniziano con "_" vengono ignorate.
 
 Variabili d'ambiente:
-    GDRIVE_SA_JSON   JSON della service account (che ha accesso in lettura a ROOT)
+    (credenziali)    ADC da google-github-actions/auth (WIF), oppure GDRIVE_SA_JSON
     DRIVE_ROOT_ID    ID della cartella radice (es. "Classroom")
     GEMINI_API_KEY   chiave API Gemini (free tier va bene)
     GEMINI_MODEL     modello (default: gemini-2.5-flash)
@@ -84,13 +84,20 @@ def save_state(state: dict) -> None:
 # ---------------------------------------------------------------- Drive
 
 def drive_service():
-    from google.oauth2 import service_account
+    """Credenziali via Workload Identity Federation (ADC creato da
+    google-github-actions/auth); fallback su chiave JSON in GDRIVE_SA_JSON."""
+    import google.auth
     from googleapiclient.discovery import build
 
-    info = json.loads(os.environ["GDRIVE_SA_JSON"])
-    creds = service_account.Credentials.from_service_account_info(
-        info, scopes=["https://www.googleapis.com/auth/drive.readonly"]
-    )
+    scopes = ["https://www.googleapis.com/auth/drive.readonly"]
+    if os.environ.get("GDRIVE_SA_JSON"):
+        from google.oauth2 import service_account
+
+        creds = service_account.Credentials.from_service_account_info(
+            json.loads(os.environ["GDRIVE_SA_JSON"]), scopes=scopes
+        )
+    else:
+        creds, _ = google.auth.default(scopes=scopes)
     return build("drive", "v3", credentials=creds, cache_discovery=False)
 
 
