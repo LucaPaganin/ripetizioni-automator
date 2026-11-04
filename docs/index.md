@@ -1,3 +1,3 @@
 # Ripetizioni
 
-- [Andrea Ferrando](andrea-ferrando/index.md) — 1 lezioni
+Nessuna lezione ancora: il primo sync popolerà questa pagina.
