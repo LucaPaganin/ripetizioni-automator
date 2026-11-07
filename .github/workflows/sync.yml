@@ -47,6 +47,7 @@ jobs:
           DRIVE_ROOT_ID: ${{ vars.DRIVE_ROOT_ID }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           MAX_FILES: ${{ inputs.max_files || '15' }}
+          PYTHONUNBUFFERED: "1" # progresso visibile in tempo reale nei log
         run: python pipeline/sync.py
 
       - name: Commit
