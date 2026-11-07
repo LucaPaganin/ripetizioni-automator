@@ -42,26 +42,18 @@ $$(2^{2x-1} \cdot 2^x)^2 = 2^{10x - 4}$$
 
 **Svolgimento:**
 
-1. Sviluppiamo la base applicando le proprietà delle potenze all'interno della parentesi tonda, notando che $2^x = (2^x)^1$:
-   
-   Usando il passaggio intermedio annotato:
-   $$\frac{1}{(2^y)^{1-2x}} = ((2^y)^{1-2x})^{-1} = (2^y)^{2x-1}$$
-   
-   Negli appunti l'espressione di partenza viene riscritta riconducendo tutto a base $2$:
-   $$(2^{3x-1})^2 \cdot (2^{2x-1})^{\dots} = 2^{10x - 4} \quad \text{[passaggi parziali nello schema]}$$
+1. Dentro la parentesi sommiamo gli esponenti ($a^m \cdot a^n = a^{m+n}$):
+   $$2^{2x-1} \cdot 2^x = 2^{3x-1}$$
 
-2. Sviluppando i prodotti agli esponenti:
-   $$2^{6x-2} \cdot 2^{4x-2} = 2^{10x - 4}$$
+2. Applichiamo la potenza di potenza:
+   $$(2^{3x-1})^2 = 2^{6x-2}$$
 
-3. Sommiamo gli esponenti a sinistra ($a^m \cdot a^n = a^{m+n}$):
-   $$2^{6x - 2 + 4x - 2} = 2^{10x - 4}$$
-   $$2^{10x - 4} = 2^{10x - 4}$$
+3. Uguagliamo gli esponenti:
+   $$6x - 2 = 10x - 4 \implies 4x = 2 \implies x = \frac{1}{2}$$
 
-4. Uguagliando i due membri si ottiene un'identità:
-   $$10x - 4 = 10x - 4 \implies 0 = 0$$
+**Soluzione:** $\boxed{x = \frac{1}{2}}$
 
-**Soluzione:**
-L'equazione è un'identità, dunque è **sempre vera** $\forall x \in \mathbb{R}$.
+> ⚠️ Nota: negli appunti compare anche il passaggio $\frac{1}{(2^y)^{1-2x}} = (2^y)^{2x-1}$, quindi il testo originale potrebbe contenere un fattore in più non trascritto. La soluzione sopra vale per il testo così come riportato.
 
 ---
 
@@ -136,6 +128,6 @@ Le equazioni esponenziali si risolvono riconducendo entrambi i membri alla stess
    </details>
 
 ### Flashcard
-- **D:** Come si scrive una radice n-esima $^n\sqrt{a^m}$ sotto forma di potenza? — **R:** $a^{\frac{m}{n}}$
+- **D:** Come si scrive una radice n-esima $\sqrt[n]{a^m}$ sotto forma di potenza? — **R:** $a^{\frac{m}{n}}$
 - **D:** Come si semplifica l'espressione $(a^b)^c$? — **R:** Moltiplicando gli esponenti: $a^{b \cdot c}$
 - **D:** Qual è la regola del quoziente di potenze con la stessa base $\frac{a^m}{a^n}$? — **R:** Si sottraggono gli esponenti: $a^{m-n}$

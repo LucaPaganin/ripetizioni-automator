@@ -61,7 +61,7 @@ $$m \simeq 727 \, \mathrm{kg}$$
 ## Esercizio 2 (Campo gravitazionale di Cheope)
 
 **Dati:**
-- $M = 5{,}75 \cdot 10^9 \, \mathrm{kg}$ (massa di Cheope, notare che $M \simeq 10^{15} M_{\text{Cheope}}$ è un richiamo di scala negli appunti)
+- $M = 5{,}75 \cdot 10^9 \, \mathrm{kg}$ (massa di Cheope; negli appunti il richiamo di scala $M_{\text{Terra}} \simeq 10^{15} M$)
 - $d_1 = 512 \, \mathrm{m}$
 - $d_2 = 6{,}371 \cdot 10^6 \, \mathrm{m}$ (raggio terrestre)
 - $m = 100 \, \mathrm{kg}$ (corpo di prova)

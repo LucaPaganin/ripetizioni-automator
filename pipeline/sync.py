@@ -51,19 +51,51 @@ def find_date(*candidates: str) -> str | None:
     return None
 
 
+def _load_yaml(text: str) -> dict | None:
+    """YAML del frontmatter, tollerante: Gemini scrive spesso LaTeX tra virgolette doppie
+    (es. "Formula del $\\Delta/4$"), dove in YAML il backslash è un escape non valido.
+    In quel caso le stringhe vengono riscritte tra apici singoli, dove il backslash è letterale."""
+    try:
+        meta = yaml.safe_load(text)
+        return meta if isinstance(meta, dict) else None
+    except yaml.YAMLError:
+        pass
+    fixed = re.sub(
+        r'"((?:[^"\\\n]|\\.)*)"',
+        lambda m: "'" + m.group(1).replace('\\"', '"').replace("'", "''") + "'",
+        text,
+    )
+    # Valori non tra virgolette che contengono ": " (es. "titolo: Geometria: ellisse").
+    fixed = re.sub(
+        r"^(\s*(?:- )?[\w-]+: )(?!['\"\[{|>])(.*: .*)$",
+        lambda m: m.group(1) + "'" + m.group(2).replace("'", "''") + "'",
+        fixed,
+        flags=re.M,
+    )
+    try:
+        meta = yaml.safe_load(fixed)
+        return meta if isinstance(meta, dict) else None
+    except yaml.YAMLError:
+        return None
+
+
 def split_frontmatter(md: str) -> tuple[dict, str]:
     md = md.strip()
     md = re.sub(r"^```(?:markdown|md)?\s*\n", "", md)
     md = re.sub(r"\n```\s*$", "", md)
-    if md.startswith("---"):
+    meta: dict = {}
+    # Anche più frontmatter in fila (pagine generate prima della correzione): si uniscono,
+    # e i campi più interni (quelli scritti da Gemini) prevalgono.
+    while md.startswith("---"):
         parts = md.split("---", 2)
-        if len(parts) == 3:
-            try:
-                meta = yaml.safe_load(parts[1]) or {}
-                return meta, parts[2].lstrip("\n")
-            except yaml.YAMLError:
-                pass
-    return {}, md
+        if len(parts) < 3:
+            break
+        inner = _load_yaml(parts[1])
+        if inner is None:
+            break
+        meta = {**meta, **inner}
+        md = parts[2].strip()
+    return meta, md
 
 
 def join_frontmatter(meta: dict, body: str) -> str:
@@ -206,6 +238,45 @@ def transcribe(pdf: bytes) -> str:
             raise ConfigError(f"modello '{model}': {e}") from e
         raise
     return resp.text or ""
+
+
+# ---------------------------------------------------------------- revisione
+
+REVIEW_PROMPT = (ROOT / "pipeline" / "review_prompt.md").read_text(encoding="utf-8")
+
+
+def review_md(pdf: bytes, body: str) -> str:
+    """Seconda passata: Gemini rilegge PDF + trascrizione da revisore e restituisce solo
+    correzioni puntuali {originale, corretto, motivo}. Si applicano quelle il cui testo
+    originale compare una e una sola volta, così non può riscrivere la pagina a caso."""
+    from google.genai import types
+
+    try:
+        resp = generate(
+            contents=[
+                types.Part.from_bytes(data=pdf, mime_type="application/pdf"),
+                REVIEW_PROMPT + "\n\n--- TRASCRIZIONE DA REVISIONARE ---\n\n" + body,
+            ],
+            config=types.GenerateContentConfig(temperature=0, response_mime_type="application/json"),
+        )
+        fixes = json.loads(resp.text or "[]")
+    except Exception as e:  # la revisione è un miglioramento: se fallisce si tiene la trascrizione
+        print(f"  revisione non riuscita: {e}", file=sys.stderr)
+        return body
+    applied = 0
+    for fix in fixes if isinstance(fixes, list) else []:
+        if not isinstance(fix, dict):
+            continue
+        old = str(fix.get("originale", ""))
+        new = str(fix.get("corretto", ""))
+        if not old or old == new or body.count(old) != 1:
+            continue
+        body = body.replace(old, new)
+        applied += 1
+        print(f"  revisione: {str(fix.get('motivo', ''))[:150]}")
+    if applied:
+        print(f"  {applied} correzioni applicate dalla revisione")
+    return body
 
 
 # ---------------------------------------------------------------- formule
@@ -370,7 +441,8 @@ def main() -> int:
             processed += 1
             continue
         try:
-            md = transcribe(download(svc, f["id"]))
+            pdf = download(svc, f["id"])
+            md = transcribe(pdf)
         except RateLimited:
             print("Limite di richieste Gemini raggiunto: riprendo al prossimo run.")
             break
@@ -384,6 +456,8 @@ def main() -> int:
             continue
 
         meta, body = split_frontmatter(md)
+        if body.strip():
+            body = review_md(pdf, body)
         body = repair_math(body)
         if not body.strip():
             print("  risposta vuota, salto", file=sys.stderr)

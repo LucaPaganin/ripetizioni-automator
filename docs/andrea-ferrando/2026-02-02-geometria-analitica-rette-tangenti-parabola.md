@@ -181,7 +181,7 @@ La lezione spiega come determinare le rette tangenti a una parabola nei suoi pun
 
 ### Esercizi simili
 1. Trovare l'equazione della retta tangente alla parabola $y = x^2 - 4x + 3$ nel suo punto di intersezione con l'asse $y$ e calcolarne la distanza dal vertice.
-   <details><summary>Soluzione</summary>L'intersezione con l'asse $y$ è $P(0, 3)$. Il fascio per $P$ è $y = mx + 3$. Mettendo a sistema con la parabola si ottiene $x^2 - (4+m)x = 0$. Ponendo $\Delta = 0$ si ha $(4+m)^2 = 0 \implies m = -4$. La retta tangente è $\mathbf{y = -4x + 3}$.</details>
+   <details><summary>Soluzione</summary>L'intersezione con l'asse $y$ è $P(0, 3)$. Il fascio per $P$ è $y = mx + 3$. Mettendo a sistema con la parabola si ottiene $x^2 - (4+m)x = 0$. Ponendo $\Delta = 0$ si ha $(4+m)^2 = 0 \implies m = -4$. La retta tangente è $\mathbf{y = -4x + 3}$, cioè $4x + y - 3 = 0$. Il vertice è $V(2, -1)$ e la sua distanza dalla tangente è $d = \frac{|4 \cdot 2 + (-1) - 3|}{\sqrt{4^2 + 1^2}} = \frac{4}{\sqrt{17}} = \frac{4\sqrt{17}}{17}$.</details>
 
 2. Data la parabola $y = -x^2 + 5x - 6$, determinare le equazioni delle rette tangenti condotte nei punti di intersezione con l'asse $x$.
    <details><summary>Soluzione</summary>Le intersezioni con l'asse $x$ sono $A(2, 0)$ e $B(3, 0)$. Applicando i fasci e ponendo $\Delta = 0$, le tangenti sono $y = x - 2$ (in $A$) e $y = -x + 3$ (in $B$).</details>

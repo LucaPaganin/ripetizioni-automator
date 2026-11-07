@@ -83,14 +83,15 @@ Dalla (1) ricaviamo $v_{Cf}$:
 $$m_C v_{Cf} = m_A v_{Ai} - m_A v_{Af} \implies v_{Cf} = \frac{m_A}{m_C}(v_{Ai} - v_{Af})$$
 
 Sostituiamo $v_{Cf}$ nell'equazione dell'energia cinetica (2):
-$$m_A v_{Ai}^2 + m_C \left[\frac{m_A}{m_C}(v_{Ai} - v_{Af})\right]^2 = m_A v_{Ai}^2$$
+$$m_A v_{Af}^2 + m_C \left[\frac{m_A}{m_C}(v_{Ai} - v_{Af})\right]^2 = m_A v_{Ai}^2$$
 $$m_A v_{Af}^2 + \frac{m_A^2}{m_C} (v_{Ai} - v_{Af})^2 = m_A v_{Ai}^2$$
 
 Sviluppando e raccogliendo in forma di equazione di secondo grado in $v_{Af}$ ($ax^2 + bx + c = 0$):
 $$\left(1 + \frac{m_A}{m_C}\right) v_{Af}^2 - 2\frac{m_A}{m_C} v_{Ai} v_{Af} + \left(\frac{m_A}{m_C} - 1\right) v_{Ai}^2 = 0$$
 
-Applicando la formula risolutiva e semplificando per il caso in cui $m_A < m_C$, si ottiene la soluzione finale per la velocità del corpo $A$ dopo l'urto:
+Applicando la formula risolutiva si ottengono due soluzioni: $v_{Af} = v_{Ai}$ (da scartare: corrisponde a nessun urto) e la soluzione fisica per la velocità del corpo $A$ dopo l'urto:
 $$v_{Af} = \frac{m_A - m_C}{m_C + m_A} v_{Ai}$$
+Con i dati: $v_{Af} = \frac{100 - 125}{225} \cdot 1{,}25 \approx -0{,}14\text{ m/s}$ (essendo $m_A < m_C$, il corpo $A$ rimbalza indietro).
 
 ---
 

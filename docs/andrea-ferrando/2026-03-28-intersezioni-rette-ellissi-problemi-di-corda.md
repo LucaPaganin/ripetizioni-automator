@@ -147,15 +147,15 @@ Il documento analizza le intersezioni tra rette e curve ellittiche impostando si
 ### Esercizi simili
 
 1. **Esercizio A:** Data l'ellisse $\frac{x^2}{9} + \frac{y^2}{4} = 1$, trova l'intersezione con la retta $y = x$ e la lunghezza della corda generata.
-   <details><summary>Soluzione</summary>Mettendo a sistema si ottiene $x^2 = \frac{36}{13}$, da cui i punti $A\left(-\frac{6}{\sqrt{13}}, -\frac{6}{\sqrt{13}}\right)$ e $B\left(\frac{6}{\sqrt{13}}, \frac{6}{\sqrt{13}}\right)$. La lunghezza della corda è $\overline{AB} = \frac{12}{\sqrt{13}} = \frac{12\sqrt{13}}{13}$.</details>
+   <details><summary>Soluzione</summary>Mettendo a sistema si ottiene $x^2 = \frac{36}{13}$, da cui i punti $A\left(-\frac{6}{\sqrt{13}}, -\frac{6}{\sqrt{13}}\right)$ e $B\left(\frac{6}{\sqrt{13}}, \frac{6}{\sqrt{13}}\right)$. La lunghezza della corda è $\overline{AB} = \sqrt{\left(\frac{12}{\sqrt{13}}\right)^2 + \left(\frac{12}{\sqrt{13}}\right)^2} = \frac{12\sqrt{2}}{\sqrt{13}} = \frac{12\sqrt{26}}{13}$.</details>
 
 2. **Esercizio B:** Determina le rette parallele all'asse $x$ che individuano sull'ellisse $\frac{x^2}{9} + \frac{y^2}{4} = 1$ una corda di lunghezza $4$.
-   <details><summary>Soluzione</summary>Impostando $y = K$, la lunghezza della corda risulta $\frac{2}{3}\sqrt{9-K^2} = 4 \implies \sqrt{9-K^2} = 6$ (impossibile, poiché il massimo valore della corda è $6$ quando $K=0$). Non esistono rette con tali caratteristiche per la misura $4$, oppure se la misura fosse $2$ si otterrebbe $K = \pm\sqrt{6}$.</details>
+   <details><summary>Soluzione</summary>Impostando $y = K$ (con $-2 \le K \le 2$): $\frac{x^2}{9} = 1 - \frac{K^2}{4} \implies x = \pm\frac{3}{2}\sqrt{4 - K^2}$, quindi la corda misura $3\sqrt{4 - K^2}$. Da $3\sqrt{4 - K^2} = 4$: $4 - K^2 = \frac{16}{9} \implies K^2 = \frac{20}{9} \implies K = \pm\frac{2\sqrt{5}}{3}$. Le rette sono $\boxed{y = \pm\frac{2\sqrt{5}}{3}}$.</details>
 
 3. **Esercizio C:** Trova la lunghezza della corda staccata dalla retta $y = 1$ sull'ellisse $\frac{x^2}{16} + \frac{y^2}{4} = 1$.
    <details><summary>Soluzione</summary>Sostituendo $y = 1$ si ottiene $\frac{x^2}{16} + \frac{1}{4} = 1 \implies x^2 = 12 \implies x = \pm 2\sqrt{3}$. I punti sono $\left(-2\sqrt{3}, 1\right)$ e $\left(2\sqrt{3}, 1\right)$, e la lunghezza della corda è $\overline{AB} = 4\sqrt{3}$.</details>
 
 ### Flashcard
-- **D:** Come si impposta l'intersezione tra una retta $y = mx + q$ e un'ellisse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$? — **R:** Si sostituisce l'espressione di $y$ della retta nell'equazione dell'ellisse ottenendo un'equazione di secondo grado in $x$.
+- **D:** Come si imposta l'intersezione tra una retta $y = mx + q$ e un'ellisse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$? — **R:** Si sostituisce l'espressione di $y$ della retta nell'equazione dell'ellisse ottenendo un'equazione di secondo grado in $x$.
 - **D:** Come si calcola la semidistanza focale $c$ di un'ellisse canonica? — **R:** Con la formula $c = \sqrt{|a^2 - b^2|}$.
 - **D:** Qual è la condizione geometrica affinché una retta verticale $x = K$ intersechi un'ellisse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$? — **R:** L'ascissa $K$ deve appartenere all'intervallo $[-a, a]$.

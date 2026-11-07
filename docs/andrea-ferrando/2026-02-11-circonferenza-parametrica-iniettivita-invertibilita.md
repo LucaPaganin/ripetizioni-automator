@@ -55,16 +55,16 @@ Determina i valori di $k$ per cui l'equazione $x^2 + y^2 - 2x + 2y + k + 3 = 0$ 
 Completiamo i quadrati per i termini in $x$ e in $y$:
 $$x^2 - 2x + y^2 + 2y + k + 3 = 0$$
 
-Aggiungiamo e sottraiamo i termini necessari per completare i quadrati $(x-1)^2$ e $(y-1)^2$:
+Aggiungiamo e sottraiamo i termini necessari per completare i quadrati $(x-1)^2$ e $(y+1)^2$:
 $$(x^2 - 2x + 1) - 1 + (y^2 + 2y + 1) - 1 + k + 3 = 0$$
-$$(x - 1)^2 - 1 + (y - 1)^2 - 1 + k + 3 = 0$$
-$$(x - 1)^2 + (y - 1)^2 - 2 + k + 3 = 0$$
-$$(x - 1)^2 + (y - 1)^2 + k + 1 = 0$$
+$$(x - 1)^2 - 1 + (y + 1)^2 - 1 + k + 3 = 0$$
+$$(x - 1)^2 + (y + 1)^2 - 2 + k + 3 = 0$$
+$$(x - 1)^2 + (y + 1)^2 + k + 1 = 0$$
 
 Isoliamo i quadrati:
-$$(x - 1)^2 + (y - 1)^2 = -(k + 1)$$
+$$(x - 1)^2 + (y + 1)^2 = -(k + 1)$$
 
-Il centro della circonferenza è $C(1, 1)$. L'ordinata del centro è $y_0 = 1$ (quindi il centro non si trova sull'asse $x$, a prescindere dal valore di $k$).
+Il centro della circonferenza è $C(1, -1)$. L'ordinata del centro è $y_0 = -1$ (quindi il centro non si trova sull'asse $x$, a prescindere dal valore di $k$).
 
 Affinché l'equazione rappresenti una circonferenza (reale o degenere), il termine noto a destra (che corrisponde a $R^2$) deve essere maggiore o uguale a zero:
 $$R^2 = -(k + 1) \ge 0 \implies k + 1 \le 0 \implies k \le -1$$

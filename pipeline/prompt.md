@@ -29,5 +29,7 @@ Regole:
 - Verifica i calcoli degli esercizi simili prima di scriverli.
 - Le pagine vuote o con solo righe del quaderno vanno ignorate.
 - Usa solo comandi LaTeX standard supportati da KaTeX (niente macro inventate o personalizzate).
+- Nel frontmatter YAML non usare LaTeX né backslash: scrivi i valori come testo semplice (es. `Formula ridotta del delta`).
+- Usa la notazione standard e quella degli appunti (es. numero di moli $n$, $pV = nRT$) e mantienila coerente in tutto il documento.
 - Lascia una riga vuota prima di ogni elenco puntato o numerato.
 - Rispondi SOLO con il Markdown, senza blocchi ```markdown attorno.

@@ -5,7 +5,7 @@ studente: Andrea Ferrando
 materia: fisica
 argomento: Dinamica e Urti
 sottoargomenti:
-- Urti anaelastici in 1D
+- Urti anelastici in 1D
 - Urti elastici in 2D
 - Conservazione della quantità di moto
 - Dissipazione di energia cinetica
@@ -26,7 +26,7 @@ generato: '2026-11-07'
 *   **Variazione di energia cinetica ($\Delta E$):**
     $$\Delta E = E_i - E_f = \frac{1}{2}m_1 v_{1i}^2 + \frac{1}{2}m_2 v_{2i}^2 - \frac{1}{2}(m_1 + m_2)v_f^2$$
 
-*   **Dissipazione percentuale di energia cinetica nell'urto anaelastico:**
+*   **Dissipazione percentuale di energia cinetica nell'urto anelastico:**
     $$\text{Dissipazione \%} = \frac{\Delta E}{E_i} \cdot 100 = \frac{\frac{1}{2}m_1 v_{1i}^2 + \frac{1}{2}m_2 v_{2i}^2 - \frac{1}{2}(m_1 + m_2)v_f^2}{\frac{1}{2}m_1 v_{1i}^2 + \frac{1}{2}m_2 v_{2i}^2} \cdot 100$$
 
 *   **Conservazione della quantità di moto (2D):**
@@ -39,25 +39,25 @@ generato: '2026-11-07'
     $$\sin(90^\circ - \theta) = \cos\theta$$
     $$\cos(90^\circ - \theta) = \sin\theta$$
 
-## Urti anaelastici in 1D e Dissipazione Energetica
+## Urti anelastici in 1D e Dissipazione Energetica
 
 Dati del problema iniziale:
 *   $m_1 = 2,5\text{ kg}$
 *   $m_2 = 30\text{ kg}$
 *   $v_{1i} = 4,5\text{ m/s}$
-*   $v_{2i} = 6\text{ m/s}$ (con verso opposto rispetto a $m_1$, quindi $v_{2i} = -6\text{ m/s}$ lungo l'asse $x$)
+*   $v_{2i} = 6\text{ m/s}$ (modulo; il verso è opposto rispetto a $m_1$, quindi $\vec{v}_{2i} = -v_{2i}\hat{x}$)
 *   Nota: $m_2 > m_1$
 
 Impostazione vettoriale iniziale:
 $$\vec{v}_{1i} = v_{1i}\hat{x}$$
 $$\vec{v}_{2i} = -v_{2i}\hat{x}$$
 
-Se l'urto è anaelastico (i corpi restano attaccati):
+Se l'urto è anelastico (i corpi restano attaccati):
 $$\vec{v}_f = -v_f\hat{x}$$
 $$m_{tot} = m_1 + m_2$$
 
 Formula della variazione di energia cinetica e calcolo della percentuale dissipata:
-Negli urti anaelastici si ha sempre $E_f < E_i$, quindi la variazione è $\Delta E = E_i - E_f$.
+Negli urti anelastici si ha sempre $E_f < E_i$, quindi la variazione è $\Delta E = E_i - E_f$.
 
 ## Urti Elastici in 2D
 
@@ -77,34 +77,35 @@ m v_i = m v_{1fx} + m v_{2fx} \\
 Semplificando la massa $m$:
 $$\begin{cases}
 v_i = v_{1fx} + v_{2fx} \\
-0 = v_{1fy} - v_{2fy} \implies v_{1fy} = -v_{2fy}
+0 = v_{1fy} + v_{2fy} \implies v_{1fy} = -v_{2fy}
 \end{cases}$$
 
 Utilizzando le componenti polari ($v_{1fx} = v_{1f}\cos\alpha$, $v_{1fy} = v_{1f}\sin\alpha$, $v_{2fx} = v_{2f}\cos\beta$, $v_{2fy} = -v_{2f}\sin\beta$):
 $$\begin{cases}
 v_i = v_{1f}\cos\alpha + v_{2f}\cos\beta \quad (1) \\
-v_{1f}\sin\alpha = -v_{2f}\sin\beta \quad (2) \\
+v_{1f}\sin\alpha = v_{2f}\sin\beta \quad (2) \\
 v_i^2 = v_{1f}^2 + v_{2f}^2 \quad (3) \text{ (derivato dalla conservazione dell'energia cinetica)}
 \end{cases}$$
 
 Isolando e risolvendo per gli angoli $\alpha$ e $\beta$:
-1. Da (2): $v_{2f}\sin\beta = -v_{1f}\sin\alpha \implies \sin\beta = -\frac{v_{1f}}{v_{2f}}\sin\alpha$
+1. Da (2): $v_{2f}\sin\beta = v_{1f}\sin\alpha \implies \sin\beta = \frac{v_{1f}}{v_{2f}}\sin\alpha$
 2. Da (1): $v_{2f}\cos\beta = v_i - v_{1f}\cos\alpha$
 3. Elevando al quadrato e sommando le equazioni trigonometriche si ottiene l'angolo $\alpha$:
 $$\alpha = \arccos\left(\frac{v_{1f}^2 + v_i^2 - v_{2f}^2}{2 v_i v_{1f}}\right)$$
 4. Sostituendo si ricava l'angolo $\beta$:
-$$\beta = \arcsin\left(-\frac{v_{1f}}{v_{2f}}\sin\alpha\right)$$
+$$\beta = \arcsin\left(\frac{v_{1f}}{v_{2f}}\sin\alpha\right)$$
+(con $\beta$ misurato sotto l'asse $x$, come nella scelta $v_{2fy} = -v_{2f}\sin\beta$)
 
 ---
 
 ## Materiale generato
 
 ### Riepilogo
-Gli appunti trattano la dinamica degli urti: nel caso anaelastico in 1D si analizza la dissipazione di energia cinetica in percentuale, mentre nell'urto elastico in 2D si applicano le leggi di conservazione della quantità di moto e dell'energia cinetica per determinare le velocità e gli angoli di deflessione tramite trigonometria.
+Gli appunti trattano la dinamica degli urti: nel caso anelastico in 1D si analizza la dissipazione di energia cinetica in percentuale, mentre nell'urto elastico in 2D si applicano le leggi di conservazione della quantità di moto e dell'energia cinetica per determinare le velocità e gli angoli di deflessione tramite trigonometria.
 
 ### Esercizi simili
 
-1. Due corpi di masse $m_1 = 2\text{ kg}$ e $m_2 = 3\text{ kg}$ si muovono uno contro l'altro su una retta con velocità rispettivamente $v_{1i} = 5\text{ m/s}$ e $v_{2i} = -3\text{ m/s}$. Dopo un urto completamente anaelastico, calcola l'energia cinetica dissipata.
+1. Due corpi di masse $m_1 = 2\text{ kg}$ e $m_2 = 3\text{ kg}$ si muovono uno contro l'altro su una retta con velocità rispettivamente $v_{1i} = 5\text{ m/s}$ e $v_{2i} = -3\text{ m/s}$. Dopo un urto completamente anelastico, calcola l'energia cinetica dissipata.
 <details><summary>Soluzione</summary>
 Quantità di moto iniziale: $p_i = (2 \cdot 5) + (3 \cdot (-3)) = 10 - 9 = 1\text{ kg}\cdot\text{m/s}$.
 Velocità finale: $v_f = \frac{p_i}{m_1 + m_2} = \frac{1}{5} = 0,2\text{ m/s}$.
@@ -125,7 +126,7 @@ $$v = \frac{72}{3,6} = \mathbf{20\text{ m/s}}$$
 </details>
 
 ### Flashcard
-- **D:** Cos'è un urto anaelastico? — **R:** Un urto in cui i corpi rimangono uniti dopo l'impatto e l'energia cinetica non si conserva (si dissipa).
+- **D:** Cos'è un urto anelastico? — **R:** Un urto in cui i corpi rimangono uniti dopo l'impatto e l'energia cinetica non si conserva (si dissipa).
 - **D:** Come si converte una velocità da km/h a m/s? — **R:** Dividendo per $3,6$.
 - **D:** Negli urti elastici in 2D tra masse uguali, cosa si conserva? — **R:** Sia la quantità di moto vettoriale che l'energia cinetica totale del sistema.
 - **D:** Qual è la relazione fondamentale tra seno e coseno usata per ricavare gli angoli negli urti 2D? — **R:** $\sin^2\theta + \cos^2\theta = 1$.

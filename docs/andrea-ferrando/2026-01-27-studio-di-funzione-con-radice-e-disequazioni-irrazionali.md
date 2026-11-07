@@ -59,8 +59,7 @@ $$x(x+2) \ge 0 \iff x \le -2 \lor x \ge 0 \quad (1)$$
 Isoliamo il radicale nella prima equazione (condizione di esistenza della frazione):
 $$2 - x \neq \sqrt{x^2 + 2x} \quad (2)$$
 
-Per risolvere la (2) con l'equazione associata elevata al quadrato (notando che se $2-x < 0$ l'equazione è impossibile o comunque verificata se il radicale è positivo, ma procediamo con il sistema dei casi):
-Impostiamo le condizioni di accettabilità (c.c.s.):
+Risolviamo l'equazione associata $2 - x = \sqrt{x^2 + 2x}$: se $2 - x < 0$ è impossibile (una radice non è mai negativa), quindi basta studiare il caso $2 - x \ge 0$ con le condizioni di accettabilità (c.c.s.):
 $$\begin{cases} 
 2 - x \ge 0 \\ 
 (2 - x)^2 \neq x^2 + 2x 
@@ -75,8 +74,8 @@ x \le 2 \\
 x \neq \frac{2}{3} 
 \end{cases}$$
 
-Mettendo a sistema la condizione (1) del radicando e la non-uguaglianza (2):
-$$\text{C.E.: } \left(x \le -2 \lor x \ge 0\right) \land \left(x \le 2 \land x \neq \frac{2}{3}\right)$$
+Quindi il denominatore si annulla solo per $x = \frac{2}{3}$ (per $x > 2$ non si annulla mai). Mettendo a sistema la condizione (1) del radicando e la (2):
+$$\text{C.E.: } \left(x \le -2 \lor x \ge 0\right) \land x \neq \frac{2}{3}$$
 
 In sintesi, il dominio della funzione è:
 $$\text{C.E.: } x \le -2 \lor 0 \le x < \frac{2}{3} \lor x > \frac{2}{3}$$
@@ -110,18 +109,27 @@ Distinguiamo i casi del valore assoluto:
   - Caso $x \ge 2$: 
     $$x - 2 - 3x > 0 \implies -2x > 2 \implies x < -1 \quad (\text{nessuna soluzione con } x \ge 2)$$
   - Caso $x < 2$: 
-    $$-(x - 2) - 3x > 0 \implies -4x > -4 \implies x < 1$$
-    Mettendo a sistema con $x < 2$ otteniamo $x < 1$.
+    $$-(x - 2) - 3x > 0 \implies -4x + 2 > 0 \implies x < \frac{1}{2}$$
+    Mettendo a sistema con $x < 2$ otteniamo $x < \frac{1}{2}$.
     
-  Unendo i casi, il numeratore è positivo per $x < 1$. Tenendo conto del C.E., il numeratore si comporta positivamente dove definito.
+  Unendo i casi, il numeratore è positivo per $x < \frac{1}{2}$, nullo per $x = \frac{1}{2}$ e negativo per $x > \frac{1}{2}$.
 
 - **Denominatore $> 0$ ($D > 0$):**
   $$2 - x - \sqrt{x^2 + 2x} > 0 \implies 2 - x > \sqrt{x^2 + 2x}$$
   Questa disequazione irrazionale si divide nei casi in cui il termine $2-x$ è positivo o negativo:
   - Se $2 - x < 0 \implies x > 2$: la radice (che è sempre positiva o nulla dove esiste) non può essere minore di un numero negativo. Quindi qui il denominatore è negativo.
-  - Se $2 - x > 0 \implies x < 2$: elevando al quadrato si ottiene la disequazione risololta nello studio dei segni del denominatore, che risulta verificata per $x \le \frac{2}{3}$ (nei limiti del C.E.).
+  - Se $2 - x \ge 0 \implies x \le 2$: elevando al quadrato $(2 - x)^2 > x^2 + 2x \implies 4 - 4x > 2x \implies x < \frac{2}{3}$.
 
-In definitiva, combinando il segno del numeratore e del denominatore con il grafico dei segni e intersecando con il dominio, si ottiene l'andamento del segno di $f(x)$ nel piano cartesiano.
+  Nel C.E. il denominatore è quindi positivo per $x \le -2 \lor 0 \le x < \frac{2}{3}$ e negativo per $x > \frac{2}{3}$.
+
+**Segno di $f(x)$** (grafico dei segni di $N$ e $D$ nel C.E.):
+- $x \le -2$: $N > 0$, $D > 0 \implies f(x) > 0$
+- $0 \le x < \frac{1}{2}$: $N > 0$, $D > 0 \implies f(x) > 0$
+- $x = \frac{1}{2}$: $f(x) = 0$
+- $\frac{1}{2} < x < \frac{2}{3}$: $N < 0$, $D > 0 \implies f(x) < 0$
+- $x > \frac{2}{3}$: $N < 0$, $D < 0 \implies f(x) > 0$
+
+$$\boxed{f(x) > 0 \iff x \le -2 \ \lor\ 0 \le x < \tfrac{1}{2} \ \lor\ x > \tfrac{2}{3}}$$
 
 ---
 
@@ -141,23 +149,23 @@ Lo studio di una funzione con radicali e valori assoluti richiede la determinazi
 1. Studiare il dominio, gli zeri e il segno della funzione:
    $$f(x) = \frac{x - 1}{1 - x - \sqrt{x^2 - 1}}$$
    <details><summary>Soluzione</summary>
-   - C.E.: $(-\infty, -1] \cup \{1\}$ non ammissibile per denominatore nullo, procedere imponendo le condizioni di realtà del radicale $x^2 - 1 \ge 0 \implies x \le -1 \lor x \ge 1$ e la diversità da zero del denominatore $1 - x \neq \sqrt{x^2-1}$.
-   - Zeri: $x = 1$ (da verificare l'accettabilità nel dominio).
-   - Segno: studiare $N>0$ e $D>0$ unendo i risultati con il C.E.
+   - C.E.: radicando $x^2 - 1 \ge 0 \implies x \le -1 \lor x \ge 1$; denominatore nullo se $1 - x = \sqrt{x^2 - 1}$, cioè (con $x \le 1$) $1 - 2x = -1 \implies x = 1$. Quindi C.E.: $x \le -1 \lor x > 1$.
+   - Zeri: $N = 0 \iff x = 1$, che è escluso dal C.E. $\implies$ nessuno zero.
+   - Segno: $N > 0 \iff x > 1$; $D > 0 \iff x < 1$ (cioè $x \le -1$ nel C.E.). Quindi $f(x) < 0$ su tutto il dominio.
    </details>
 
 2. Trovare il dominio della funzione:
    $$f(x) = \frac{2x + 3}{\sqrt{4 - x^2} - x}$$
    <details><summary>Soluzione</summary>
    - C.E.: Sistema con il radicando $\ge 0$ ($4 - x^2 \ge 0 \implies -2 \le x \le 2$) e il denominatore non nullo ($\sqrt{4 - x^2} \neq x$).
-   - Svolgendo la condizione del denominatore si ottiene l'intervallo di validità escludendo il punto in cui si annulla.
+   - $\sqrt{4 - x^2} = x$ richiede $x \ge 0$ e $4 - x^2 = x^2 \implies x = \sqrt{2}$. Quindi C.E.: $[-2, \sqrt{2}) \cup (\sqrt{2}, 2]$.
    </details>
 
 3. Determinare gli zeri della funzione:
    $$f(x) = \frac{|2x - 1| - x}{x + \sqrt{x}}$$
    <details><summary>Soluzione</summary>
    - C.E.: $x \ge 0$ e $x + \sqrt{x} \neq 0 \implies x > 0$.
-   - Zeri: porre $|2x - 1| - x = 0$ distinguendo i casi per $2x - 1 \ge 0$ ($x \ge \frac{1}{2}$) e $2x - 1 < 0$ ($x < \frac{1}{2}$), accettando solo le soluzioni strettamente maggiori di $0$.
+   - Zeri: porre $|2x - 1| - x = 0$ distinguendo i casi per $2x - 1 \ge 0$ ($x \ge \frac{1}{2}$) e $2x - 1 < 0$ ($x < \frac{1}{2}$), accettando solo le soluzioni strettamente maggiori di $0$: per $x \ge \frac{1}{2}$, $2x - 1 = x \implies x = 1$; per $x < \frac{1}{2}$, $1 - 2x = x \implies x = \frac{1}{3}$. Zeri: $x = \frac{1}{3}$ e $x = 1$.
    </details>
 
 ### Flashcard

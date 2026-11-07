@@ -22,7 +22,7 @@ generato: '2026-11-07'
 
 ## Formule chiave
 
-Data una traslazione del piano che sposta l'origine dei assi $O(0,0)$ nel nuovo punto $O'(x_0, y_0)$, le equazioni generali della trasformazione (cambio di coordinate) sono:
+Data una traslazione del piano che sposta l'origine degli assi $O(0,0)$ nel nuovo punto $O'(x_0, y_0)$, le equazioni generali della trasformazione (cambio di coordinate) sono:
 
 $$T: \begin{cases} x' = x - x_0 \\ y' = y - y_0 \end{cases}$$
 
@@ -37,7 +37,7 @@ Se invece si vuole traslare una figura geometrica (come una circonferenza) nel p
 ## Esercizio 73
 
 **Testo dell'esercizio:**
-La corrisponente della circonferenza di equazione $x^2 + y^2 - 2x + 6y + k = 0$ nella traslazione di vettore $\vec{v} = (-1, 2)$ passa per l'origine degli assi. Qual è il valore di $k$?
+La corrispondente della circonferenza di equazione $x^2 + y^2 - 2x + 6y + k = 0$ nella traslazione di vettore $\vec{v} = (-1, 2)$ passa per l'origine degli assi. Qual è il valore di $k$?
 
 **Svolgimento:**
 
@@ -87,11 +87,11 @@ La traslazione di una conica nel piano cartesiano si gestisce mediante il cambia
 
 ### Esercizi simili
 
-1. **Esercizio 1:** Data la circonferenza $x^2 + y^2 + 4x - 2y + p = 0$, determina il valore di $p$ affinché la sua traslata secondo il vettore $\vec{v} = (2, -1)$ passi per l'origine degli assi.
+1. **Esercizio 1:** Data la circonferenza $x^2 + y^2 + 4x - 2y + p = 0$, determina il valore di $p$ affinché la sua traslata secondo il vettore $\vec{v} = (2, 1)$ passi per l'origine degli assi.
    <details><summary>Soluzione</summary>
-   Completando i quadrati si ottiene $(x+2)^2 + (y-1)^2 = 5 - p$. 
-   Applicando la traslazione con vettore $-\vec{v} = (-2, 1)$, l'equazione della circonferenza traslata diventa $(x')^2 + (y')^2 = 5 - p$. 
-   Imponendo il passaggio per l'origine $(0,0)$, si ha $0 + 0 = 5 - p \implies \boxed{p = 5}$.
+   Completando i quadrati si ottiene $(x+2)^2 + (y-1)^2 = 5 - p$, con centro $C(-2, 1)$.
+   La traslazione di vettore $\vec{v} = (2, 1)$ porta il centro in $C'(0, 2)$: la circonferenza traslata è $x'^2 + (y' - 2)^2 = 5 - p$.
+   Imponendo il passaggio per l'origine $(0,0)$: $0 + 4 = 5 - p \implies \boxed{p = 1}$ (raggio $2$).
    </details>
 
 2. **Esercizio 2:** Trova l'equazione della circonferenza $x^2 + y^2 - 6x = 0$ traslata dal vettore $\vec{v} = (-1, 3)$.
@@ -100,7 +100,7 @@ La traslazione di una conica nel piano cartesiano si gestisce mediante il cambia
    $(x + 1 - 3)^2 + (y - 3)^2 = 9 \implies (x - 2)^2 + (y - 3)^2 = 9$, ovvero $\boxed{x^2 + y^2 - 4x - 6y + 4 = 0}$.
    </details>
 
-3. **Esercizio 3:** Determina il vettore di traslazione $\vec{v}$ che porta il centro della circonferenza $x^2 + y^2 - 2x - 4q = 0$ nel punto $C'(3, 0)$.
+3. **Esercizio 3:** Determina il vettore di traslazione $\vec{v}$ che porta il centro della circonferenza $x^2 + y^2 - 2x - 4 = 0$ nel punto $C'(3, 0)$.
    <details><summary>Soluzione</summary>
    Il centro di partenza è $C(1, 0)$. Il vettore di traslazione che porta $C$ in $C'$ è $\vec{v} = C' - C = (3 - 1, 0 - 0) = \boxed{(2, 0)}$.
    </details>

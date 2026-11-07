@@ -65,12 +65,9 @@ Il processo si divide in tre passaggi consecutivi:
 
 **Calcolo del calore totale:**
 $$Q_{\text{tot}} = Q_{AB} + Q_{BC} + Q_{CD}$$
-$$Q_{\text{tot}} = 22600\text{ J} + 3352\text{ kJ} + 2511600\text{ J}$$
+$$Q_{\text{tot}} = 226000\text{ J} + 3352\text{ kJ} + 2511600\text{ J}$$
 Convertendo tutto in Joule ($3352\text{ kJ} = 3352000\text{ J}$):
-$$Q_{\text{tot}} = 22600\text{ J} + 3352000\text{ J} + 2511600\text{ J} = 5886200\text{ J}$$
-
-*(Nota: Rilegendone lo sviluppo finale corretto in kJ)*:
-$$Q_{\text{tot}} = 3625760\text{ J} = \boxed{362,58\text{ kJ}}$$
+$$Q_{\text{tot}} = 226000\text{ J} + 3352000\text{ J} + 2511600\text{ J} = 6089600\text{ J} = \boxed{6089,6\text{ kJ}} \approx 6,09\text{ MJ}$$
 
 ---
 

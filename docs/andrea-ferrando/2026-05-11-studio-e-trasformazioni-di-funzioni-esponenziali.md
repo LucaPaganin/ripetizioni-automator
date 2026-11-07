@@ -105,12 +105,14 @@ $$y = -\left|4 - \left(\frac{1}{2}\right)^{2-x}\right|$$
 Analizziamo la base e l'esponente:
 $$\left(\frac{1}{2}\right)^{2-x} = 2^{-(2-x)} = 2^{x-2}$$
 
-L'esponente $x-2$ indica una traslazione verso destra di $2$ unità ($ \Delta x = 2 $) del grafico di base $2^x$, che geometricamente equivale anche a una riflessione rispetto alla retta $x = 2$.
+L'esponente $x-2$ indica una traslazione verso destra di $2$ unità ($\Delta x = 2$) del grafico di base $2^x$.
 
 Progressione delle trasformazioni:
-1. Funzione esponenziale iniziale con traslazione: $t_2(x) = x-2$ applicata a $2^x$.
-2. Riflessione verticale data dal segno meno davanti a $4 - \dots$
-3. Valore assoluto esterno $-\left| \dots \right|$ applicato per ultimo come operazione verticale.
+1. $2^x \to 2^{x-2}$: traslazione a destra di $2$ unità.
+2. $2^{x-2} \to -2^{x-2}$: riflessione rispetto all'asse $x$.
+3. $-2^{x-2} \to 4 - 2^{x-2}$: traslazione verso l'alto di $4$ unità.
+4. $4 - 2^{x-2} \to \left|4 - 2^{x-2}\right|$: valore assoluto esterno (ribalta sopra l'asse $x$ la parte negativa, cioè per $x > 4$).
+5. $\left|4 - 2^{x-2}\right| \to -\left|4 - 2^{x-2}\right|$: riflessione finale rispetto all'asse $x$ (il grafico sta tutto nel semipiano $y \le 0$).
 
 ---
 
