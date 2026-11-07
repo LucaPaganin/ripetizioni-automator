@@ -149,21 +149,38 @@ class RateLimited(Exception):
     pass
 
 
+class ConfigError(Exception):
+    """Errore che si ripeterebbe su ogni file (modello inesistente, chiave non valida...)."""
+
+
+_client = None
+
+
 def transcribe(pdf: bytes) -> str:
     from google import genai
     from google.genai import types, errors
 
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    global _client
+    if _client is None:
+        # v1beta: è la versione che espone tutti i modelli e gli alias "-latest";
+        # da google-genai 3.x il default è v1, dove molti modelli risultano 404.
+        _client = genai.Client(
+            api_key=os.environ["GEMINI_API_KEY"],
+            http_options=types.HttpOptions(api_version="v1beta"),
+        )
     model = os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash"
     try:
-        resp = client.models.generate_content(
+        resp = _client.models.generate_content(
             model=model,
             contents=[types.Part.from_bytes(data=pdf, mime_type="application/pdf"), PROMPT],
             config=types.GenerateContentConfig(temperature=0.2),
         )
     except errors.APIError as e:
-        if getattr(e, "code", None) == 429:
+        code = getattr(e, "code", None)
+        if code == 429:
             raise RateLimited(str(e)) from e
+        if code in (401, 403, 404):
+            raise ConfigError(f"modello '{model}': {e}") from e
         raise
     return resp.text or ""
 
@@ -243,6 +260,11 @@ def main() -> int:
         except RateLimited:
             print("Limite di richieste Gemini raggiunto: riprendo al prossimo run.")
             break
+        except ConfigError as e:
+            print(f"Errore di configurazione Gemini, interrompo: {e}", file=sys.stderr)
+            print("Controlla GEMINI_API_KEY e GEMINI_MODEL (es. gemini-2.5-flash).", file=sys.stderr)
+            write_indexes()
+            return 1
         except Exception as e:  # un file rotto non deve bloccare gli altri
             print(f"  errore: {e}", file=sys.stderr)
             continue
