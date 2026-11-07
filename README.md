@@ -31,7 +31,7 @@ Nota: sul free tier Google può usare i contenuti inviati per migliorare i propr
 - **Variables**:
   - `GCP_WIF_PROVIDER`, `GCP_SERVICE_ACCOUNT`: stampati da `gcp-setup.sh`
   - `DRIVE_ROOT_ID`: ID della cartella Classroom (dall'URL `drive.google.com/drive/folders/<ID>`)
-  - `GEMINI_MODEL` (facoltativo, default `gemini-2.5-flash`)
+  - `GEMINI_MODEL` (facoltativo, default `gemini-flash-latest`, alias che punta sempre all'ultimo Flash; per fissare un modello: es. `gemini-3.5-flash-lite`. Elenco aggiornato: [modelli Gemini](https://ai.google.dev/gemini-api/docs/models))
 - *Settings → Pages → Source*: **GitHub Actions**.
 
 ### 4. Primo giro

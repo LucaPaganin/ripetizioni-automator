@@ -1,3 +1,3 @@
 # Ripetizioni
 
-Nessuna lezione ancora: il primo sync popolerà questa pagina.
+- [Alessandro Baccelli](alessandro-baccelli/index.md) — 15 lezioni
