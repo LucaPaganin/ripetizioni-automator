@@ -1,0 +1,8 @@
+/* Formule display: a blocco, centrate, scorrevoli se troppo larghe (telefono). */
+.math-display {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0.8em 0;
+}
+.katex { font-size: 1.05em; }
