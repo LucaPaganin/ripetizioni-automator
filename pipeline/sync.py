@@ -9,7 +9,7 @@ Variabili d'ambiente:
     (credenziali)    ADC da google-github-actions/auth (WIF), oppure GDRIVE_SA_JSON
     DRIVE_ROOT_ID    ID della cartella radice (es. "Classroom")
     GEMINI_API_KEY   chiave API Gemini (free tier va bene)
-    GEMINI_MODEL     modello (default: gemini-3.5-flash-lite)
+    GEMINI_MODEL     modello (default: gemini-flash-latest)
     MAX_FILES        PDF massimi da elaborare per run (default: 15)
     DRY_RUN          "1" = elenca cosa farebbe senza chiamare Gemini
 """
@@ -168,7 +168,7 @@ def transcribe(pdf: bytes) -> str:
             api_key=os.environ["GEMINI_API_KEY"],
             http_options=types.HttpOptions(api_version="v1beta"),
         )
-    model = os.environ.get("GEMINI_MODEL") or "gemini-3.5-flash-lite"
+    model = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
     try:
         resp = _client.models.generate_content(
             model=model,
@@ -262,7 +262,7 @@ def main() -> int:
             break
         except ConfigError as e:
             print(f"Errore di configurazione Gemini, interrompo: {e}", file=sys.stderr)
-            print("Controlla GEMINI_API_KEY e GEMINI_MODEL (es. gemini-3.5-flash-lite).", file=sys.stderr)
+            print("Controlla GEMINI_API_KEY e GEMINI_MODEL (es. gemini-flash-latest).", file=sys.stderr)
             write_indexes()
             return 1
         except Exception as e:  # un file rotto non deve bloccare gli altri
