@@ -140,7 +140,7 @@ La dinamica rotazionale specchia quella traslazionale: la forza diventa il momen
 3. Una trottola cilindrica omogenea di massa $m = 0.5\text{ kg}$ e raggio $r = 0.1\text{ m}$ ruota attorno al suo asse di simmetria con un momento d'inerzia $I = \frac{1}{2}mr^2$. Se viene frenata da un momento d'attrito costante di $0.05\text{ N}\cdot\text{m}$, in quanto tempo $\Delta t$ si ferma partendo da una velocità angolare $\omega_0 = 20\text{ rad/s}$?
    <details><summary>Soluzione</summary>
    $I = \frac{1}{2} \cdot 0.5 \cdot (0.1)^2 = 0.0025\text{ kg}\cdot\text{m}^2$.
-   L'accelerazione angolare (in questo caso retardatrice) è $\alpha = \frac{-M}{I} = \frac{-0.05}{0.0025} = -20\text{ rad/s}^2$.
+   L'accelerazione angolare (in questo caso frenante) è $\alpha = \frac{-M}{I} = \frac{-0.05}{0.0025} = -20\text{ rad/s}^2$.
    Dalla legge $\omega_f = \omega_0 + \alpha \Delta t$:
    $0 = 20 - 20\Delta t \implies \Delta t = \mathbf{1.0\text{ s}}$.
    </details>

@@ -11,7 +11,7 @@ sottoargomenti:
 esercizi:
 - '25'
 errori_tipici:
-- Confondere la distanza al perielio e all'apoforo con il semiasse maggiore
+- Confondere la distanza al perigeo e all'apogeo con il semiasse maggiore
 fonte: https://drive.google.com/file/d/1_rRMuSoOS8eFV06JpFXqCXZOcTyWyYnL/view?usp=drivesdk
 generato: '2026-11-07'
 ---
@@ -64,8 +64,8 @@ Convertendo in metri ($1 \text{ au} = 1,5 \cdot 10^{11} \text{ m}$):
 $$a = 2,2188 \cdot 1,5 \cdot 10^{11} \text{ m}$$
 
 Periodo di rivoluzione ($T$):
-Dalla costante di Keplero ricavata per il sistema solare ($K \approx 7,506 \cdot 10^{-6} \frac{\text{au}^3}{\text{d}^2}$ oppure usando direttamente $a$ in au e $T$ in anni):
-$$T_{\text{cometa}} = \sqrt{\frac{a^3_{\text{cometa}}}{K}} = \sqrt{(2,2188)^3} \approx \boxed{3,305 \text{ y}}$$
+Dalla costante di Keplero per il sistema solare: con $a$ in au e $T$ in anni vale $K = 1 \, \frac{\text{au}^3}{\text{anno}^2}$ (equivalente a $K \approx 7,5 \cdot 10^{-6} \frac{\text{au}^3}{\text{d}^2}$ con $T$ in giorni), quindi:
+$$T_{\text{cometa}} = \sqrt{\frac{a^3_{\text{cometa}}}{K}} = \sqrt{(2,2188)^3} \approx \boxed{3,305 \text{ anni}}$$
 
 ---
 

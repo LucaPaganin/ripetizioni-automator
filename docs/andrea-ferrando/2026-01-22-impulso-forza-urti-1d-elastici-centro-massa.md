@@ -87,8 +87,10 @@ $$I_2 = +3\,\text{N}\cdot\text{s} \quad (\text{impulso esercitato su 2 da 1})$$
 Sapendo che $T = 10\,\text{ms} = 10^{-2}\,\text{s}$:
 $$\Delta p_1 = \langle F \rangle \cdot T \implies \langle F_1 \rangle = \frac{\Delta p_1}{T} = \frac{-3\,\text{kg}\cdot\text{m/s}}{10^{-2}\,\text{s}} = -300\,\text{N}$$
 
-Se $m = 1\,\text{kg}$ riceve un'accelerazione media $\langle a \rangle = \frac{\Delta v}{T} = \frac{300\,\text{m/s}}{1\,\text{s}}$ (o $300\,\text{m/s}^2$ per $\Delta t = 1\,\text{s}$), la velocità finale dopo un $\Delta t$ varrebbe:
-$$v_f = a \cdot \Delta t = 300\,\text{m/s} = 1080\,\text{km/h}$$
+La massa $m = 1\,\text{kg}$ subisce quindi un'accelerazione media
+$$\langle a \rangle = \frac{\Delta v}{T} = \frac{3\,\text{m/s}}{10^{-2}\,\text{s}} = 300\,\text{m/s}^2$$
+Per rendersi conto dell'ordine di grandezza: se questa accelerazione durasse $\Delta t = 1\,\text{s}$, la velocità raggiunta sarebbe
+$$v_f = \langle a \rangle \cdot \Delta t = 300\,\text{m/s} = 1080\,\text{km/h}$$
 
 ---
 

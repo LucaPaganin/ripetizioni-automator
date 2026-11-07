@@ -33,7 +33,7 @@ generato: '2026-11-07'
 - **Area del segmento parabolico (Teorema di Archimede):**
   L'area compresa tra una parabola e una retta secante è data da:
   $$\text{Area} = \frac{2}{3} \cdot \text{Area del triangolo circoscritto}$$
-  oppure tramite la formula di Archimede in funzione delle ascisse dei punti di tangenza $x_1$ e $x_2$:
+  (il triangolo formato dalla corda e dalle tangenti nei suoi estremi), oppure in funzione delle ascisse $x_1$ e $x_2$ dei punti di intersezione tra parabola e retta secante:
   $$\text{Area} = \frac{|a|}{6} (x_2 - x_1)^3$$
 
 ---
@@ -109,7 +109,8 @@ Risoluzione di un problema di geometria analitica con una parabola e le rette ta
    Sistema con la parabola: $x^2 - mx + 4 = 0 \implies \Delta = m^2 - 16 = 0 \implies m = \pm 4$.
    Rette tangenti: $t_1: y = 4x - 4$, $t_2: y = -4x - 4$.
    Punti di tangenza: $P_1(2, 4)$ e $P_2(-2, 4)$.
-   Area del segmento parabolico: $\frac{32}{3}$.
+   Come nell'esercizio 194: triangolo $P_1 P P_2$ con base $4$ e altezza $8$, area $16$; segmento parabolico tra $y = x^2$ e $y = 4$: $\frac{1}{6}\cdot 4^3 = \frac{32}{3}$.
+   Area delimitata dalle tangenti e dalla parabola: $16 - \frac{32}{3} = \boxed{\frac{16}{3}}$.
    </details>
 
 2. Data la parabola $y = \frac{1}{2}x^2$ e il punto $P(0, -2)$, calcola le equazioni delle rette tangenti condotte da $P$.

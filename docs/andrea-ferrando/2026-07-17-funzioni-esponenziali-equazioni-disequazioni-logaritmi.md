@@ -37,7 +37,7 @@ Dati $a > 0$ con $a \neq 1$, $x > 0$, $y > 0$:
 
 - $\log_a(xy) = \log_a x + \log_a y$
 - $\log_a\left(\frac{x}{y}\right) = \log_a x - \log_a y$
-- $\log_a(x^x) = x \cdot \log_a a$ (più in generale $\log_a(x^b) = b \cdot \log_a x$)
+- $\log_a(a^x) = x \cdot \log_a a = x$ (più in generale $\log_a(x^b) = b \cdot \log_a x$)
 - $\log_a\left(\frac{1}{x}\right) = -\log_a x$
 - $\log_a a = 1$ $\forall a > 0, a \neq 1$
 - $a^{\log_a x} = x$
@@ -54,14 +54,14 @@ $$\log_a x = \frac{\log_b x}{\log_b a}$$
 Quando ci troviamo di fronte a un'equazione elementare del tipo:
 $$a^x = A \implies x = \log_a A$$
 
-Ad esempio, per risolvere un'equazione con $4^x + 2^x - 1 = 0$, poniamo una variabile ausiliaria $t = 2^x \ge 0$, sapendo che $4^x = t^2$. L'equazione diventa:
+Ad esempio, per risolvere un'equazione con $4^x + 2^x - 1 = 0$, poniamo una variabile ausiliaria $t = 2^x > 0$, sapendo che $4^x = t^2$. L'equazione diventa:
 $$t^2 + t - 1 = 0$$
 
 Risolvendo rispetto a $t$:
 $$t = \frac{-1 \pm \sqrt{1 - 4(1)(-1)}}{2} = \frac{-1 \pm \sqrt{5}}{2}$$
 
 Otteniamo due soluzioni per $t$:
-- $t_1 = \frac{1+\sqrt{5}}{2}$ (accettabile, poiché $> 0$)
+- $t_1 = \frac{-1+\sqrt{5}}{2}$ (accettabile, poiché $> 0$)
 - $t_2 = \frac{-1-\sqrt{5}}{2}$ (non accettabile, poiché negativo)
 
 Tornando alla variabile $x$:

@@ -125,10 +125,10 @@ $$\boxed{x^2 + y^2 + 2x + 2y - 3 = 0}$$
    <details><summary>Soluzione</summary>Circonferenza di centro $(0, 1)$ e raggio $2$, limitata al ramo inferiore: $y = -\sqrt{4 - x^2} + 1$ con $x \in [-2, 2]$.</details>
 
 2. Trova l'equazione della circonferenza con centro sull'asse $x$ e passante per i punti $A(1, 2)$ e $B(3, 0)$.
-   <details><summary>Soluzione</summary>$x^2 + y^2 - 4x - 3 = 0$</details>
+   <details><summary>Soluzione</summary>Centro $C(h, 0)$ con $\overline{CA} = \overline{CB}$: $(1 - h)^2 + 4 = (3 - h)^2 \implies h = 1$, raggio $2$. Equazione: $(x - 1)^2 + y^2 = 4$, cioè $x^2 + y^2 - 2x - 3 = 0$.</details>
 
-3. Determina l'equazione della circonferenza tangente all'asse $y$ nell'origine e con centro sulla retta $y = 2x$.
-   <details><summary>Soluzione</summary>$x^2 + y^2 - 4x - 2y = 0$</details>
+3. Determina l'equazione della circonferenza tangente all'asse $y$ nell'origine e con centro sulla retta $y = x + 2$.
+   <details><summary>Soluzione</summary>Tangente all'asse $y$ in $O$: il centro sta sull'asse $x$, $C(h, 0)$. Dal passaggio per la retta: $0 = h + 2 \implies h = -2$, raggio $2$. Equazione: $(x + 2)^2 + y^2 = 4$, cioè $x^2 + y^2 + 4x = 0$.</details>
 
 ### Flashcard
 - **D:** Qual è il dominio della funzione $y = \sqrt{R^2 - x^2}$? — **R:** $[-R, R]$

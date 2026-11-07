@@ -25,7 +25,7 @@ generato: '2026-11-07'
 - Equazione canonica dell'ellisse con centro nell'origine:
   $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 
-- Distanza focale $c$:
+- Semidistanza focale $c$:
   $$c = \sqrt{|a^2 - b^2|}$$
 
 - Eccentricità $e$:
@@ -57,13 +57,11 @@ Poiché $a = 2$ e $b = 1$ verificano la condizione $a > b$, l'equazione dell'ell
 $$\frac{x^2}{4} + \frac{y^2}{1} = 1$$
 
 ### Caso 2: Asse orizzontale minore ($a < b$, quindi $\max(a,b) = b$)
-Posto $b = 2$, l'equazione dell'eccentricità diventa:
+Il vertice $(2, 0)$ sta sull'asse minore: $a = 2$ e $b > 2$. L'equazione dell'eccentricità diventa:
 $$\frac{\sqrt{b^2 - 4}}{b} = \frac{\sqrt{3}}{2}$$
-Sostituendo $b = 2$ nell'argomento della radice e imponendo $a = 2$ come semiasse orizzontale ($a_x = 2, a_y = b$):
-$$\frac{\sqrt{a^2 - 4}}{a} = \frac{\sqrt{3}}{2} \implies \frac{4 - 4}{a} \dots$$
-Rifacendoci allo svolgimento alternativo degli appunti (convenzione con $a_x, a_y$):
-- Se $a_x = 2$ e $a_y = a$: si ottiene $\frac{a^2 - 4}{a^2} = \frac{3}{4} \implies 4(a^2 - 4) = 3a^2 \implies a^2 = 16 \implies a = 4$.
-Poiché $a_x = 2$ e $a_y = 4$ (con $a_y > a_x$), l'equazione è:
+Elevando al quadrato:
+$$\frac{b^2 - 4}{b^2} = \frac{3}{4} \implies 4(b^2 - 4) = 3b^2 \implies b^2 = 16 \implies b = 4$$
+Poiché $a = 2$ e $b = 4$ (con $b > a$), l'equazione è:
 $$\frac{x^2}{4} + \frac{y^2}{16} = 1$$
 
 Risultati finali:
@@ -117,10 +115,10 @@ La lezione illustra il calcolo dell'equazione di un'ellisse con centro nell'orig
 
 ### Esercizi simili
 1. Scrivi l'equazione dell'ellisse con centro nell'origine, vertice sull'asse $x$ in $(5, 0)$ ed eccentricità $e = \frac{3}{5}$.
-   <details><summary>Soluzione</summary>$\frac{x^2}{25} + \frac{y^2}{16} = 1$</details>
+   <details><summary>Soluzione</summary>Se $(5, 0)$ è sull'asse maggiore: $c = e \cdot a = 3$, $b^2 = 25 - 9 = 16$, quindi $\frac{x^2}{25} + \frac{y^2}{16} = 1$. Se invece $(5, 0)$ è sull'asse minore: $\frac{b^2 - 25}{b^2} = \frac{9}{25} \implies b^2 = \frac{625}{16}$, quindi $\frac{x^2}{25} + \frac{16y^2}{625} = 1$.</details>
 
-2. Scrivi l'equazione dell'ellisse con centro nell'origine passante per $P(1, 2)$ e $Q(2, 1)$.
-   <details><summary>Soluzione</summary>$\frac{x^2}{\frac{5}{3}} + \frac{y^2}{\frac{5}{3}} = 1$ (Circonferenza: $x^2 + y^2 = \frac{5}{3}$ — *Nota: i punti dati portano a $a^2=b^2$*)</details>
+2. Scrivi l'equazione dell'ellisse con centro nell'origine passante per $P(0, 2)$ e $Q(2, \sqrt{2})$.
+   <details><summary>Soluzione</summary>Da $P$: $\frac{4}{b^2} = 1 \implies b^2 = 4$. Da $Q$: $\frac{4}{a^2} + \frac{2}{4} = 1 \implies a^2 = 8$. Quindi $\frac{x^2}{8} + \frac{y^2}{4} = 1$.</details>
 
 3. Scrivi l'equazione dell'ellisse con centro nell'origine, vertice in $(0, 4)$ ed eccentricità $e = \frac{\sqrt{7}}{4}$.
    <details><summary>Soluzione</summary>$\frac{x^2}{9} + \frac{y^2}{16} = 1$</details>

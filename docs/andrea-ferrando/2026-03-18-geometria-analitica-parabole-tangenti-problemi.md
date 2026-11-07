@@ -36,7 +36,7 @@ generato: '2026-11-07'
 ## Esercizio 5
 
 ### Testo
-Data la parabola $r: y = x^2$ al punto $B(2,4)$ e la retta passante per $D(-1,1)$ e $V(0,0)$, si intersecano nel punto $A$. Determina l'area della zona colorata (triangolo mistilineo), facendo opportune considerazioni.
+Data la parabola $y = x^2$, la retta $t$ tangente alla parabola nel punto $B(2,4)$ e la retta passante per $D(-1,1)$ e $V(0,0)$ si intersecano nel punto $A$. Determina l'area della zona colorata (triangolo mistilineo $VBA$), facendo opportune considerazioni.
 
 ### Svolgimento
 
@@ -63,9 +63,9 @@ Data la parabola $r: y = x^2$ al punto $B(2,4)$ e la retta passante per $D(-1,1)
 4. **Calcolo delle aree**:
    - Area del triangolo formato da $C(0,4)$, $V(0,0)$ e $B(2,4)$:
      $$\text{Area}(CVB) = \frac{1}{2} \cdot \text{base} \cdot \text{altezza} = \frac{1}{2} \cdot 4 \cdot 2 = 4$$
-   - Applicando il teorema di Archimede per il segmento parabolico:
-     $$\text{Area del segmento} = \frac{4}{3} \cdot 4 = \frac{16}{3}$$
-   - Area del trapezio $VCBE$ (proiettando sull'asse $x$ o $y$):
+   - Applicando il teorema di Archimede (il triangolo $CVB$ è metà del triangolo inscritto nel segmento parabolico tagliato da $y = 4$), l'area tra la parabola, l'asse $y$ e la retta $y = 4$ è:
+     $$\text{Area} = \frac{4}{3} \cdot 4 = \frac{16}{3}$$
+   - Sia $E(1, 0)$ l'intersezione della tangente $t$ con l'asse $x$. Area del trapezio $VCBE$ (basi $\overline{VE} = 1$ e $\overline{CB} = 2$, altezza $4$):
      $$\text{Area} = \frac{(b + B) \cdot h}{2} = \frac{(1 + 2) \cdot 4}{2} = 6$$
    - Sottraendo l'area del segmento parabolico dall'area del trapezio si ottiene la prima parte dell'area mistilinea:
      $$\text{Area}_1 = 6 - \frac{16}{3} = \frac{2}{3}$$
@@ -84,15 +84,15 @@ Il rettangolo $ABCD$ in figura è iscritto nelle due parabole. I lati del rettan
 ### Svolgimento
 
 1. **Ricaviamo le equazioni delle parabole dal grafico**:
-   - La parabola superiore $\gamma_1: y = x^2 - 4$ (passante per $(0,-4)$, vertice in $(0,-4)$).
-   - La parabola inferiore $\gamma_2: y = -x^2 + 4$ (passante per $(0,4)$, vertice in $(0,4)$).
+   - La parabola inferiore $\gamma_1: y = x^2 - 4$ (concavità verso l'alto, vertice in $(0,-4)$).
+   - La parabola superiore $\gamma_2: y = -x^2 + 4$ (concavità verso il basso, vertice in $(0,4)$).
 
 2. **Coordinate dei vertici del rettangolo**:
    Per simmetria rispetto all'asse $y$, poniamo l'ascissa del vertice $A$ pari a $d$ ($d > 0$).
    - $A(d, -d^2 + 4)$ appartenente a $\gamma_2$ (oppure impostando le coordinate generali simmetriche).
    - $B(-d, -d^2 + 4)$
-   - $C(d, d^2 - 4)$ appartenente a $\gamma_1$
-   - $D(-d, d^2 - 4)$
+   - $C(-d, d^2 - 4)$ appartenente a $\gamma_1$
+   - $D(d, d^2 - 4)$ appartenente a $\gamma_1$
 
 3. **Lunghezza dei lati**:
    - $\overline{AB} = 2d$
@@ -134,8 +134,8 @@ Lo studio delle parabole nel piano cartesiano richiede la determinazione accurat
 2. Calcola l'area della regione finita di piano delimitata dalla parabola $y = -x^2 + 4$ e dall'asse $x$.
    <details><summary>Soluzione</summary>$\frac{32}{3}$</details>
 
-3. Un rettangolo ha i vertici paralleli agli assi inscritti tra le parabole $y = x^2 - 3$ e $y = -x^2 + 3$. Sapendo che la base è la metà dell'altezza, determina l'area del rettangolo.
-   <details><summary>Soluzione</summary>$12$ (con $d=1$)</details>
+3. Un rettangolo con i lati paralleli agli assi è inscritto tra le parabole $y = x^2 - 3$ e $y = -x^2 + 3$. Sapendo che la base è la metà dell'altezza, determina l'area del rettangolo.
+   <details><summary>Soluzione</summary>Con vertici di ascissa $\pm d$: base $2d$, altezza $6 - 2d^2$. Da $2d = \frac{6 - 2d^2}{2}$ si ottiene $d^2 + 2d - 3 = 0 \implies d = 1$ ($d = -3$ non accettabile). Base $2$, altezza $4$, area $\boxed{8}$.</details>
 
 ### Flashcard
 - **D:** Come si impone la condizione di tangenza tra una retta e una parabola? — **R:** Si mette a sistema l'equazione della retta con quella della parabola e si pone il discriminante $\Delta = 0$ dell'equazione risolvente.

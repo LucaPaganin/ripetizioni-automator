@@ -26,10 +26,10 @@ generato: '2026-11-07'
 
 ## Formule chiave
 
-- **Traslazione delle coordinate (cambio di riferimento):**
-  Dato un vettore di traslazione $\vec{v} = (v_x, v_y)$, la relazione tra le vecchie coordinate $(x, y)$ e le nuove coordinate $(x', y')$ è:
+- **Traslazione di un oggetto geometrico di vettore $\vec{v} = (v_x, v_y)$:**
+  Il punto $(x, y)$ viene portato in $(x', y') = (x + v_x, y + v_y)$; per ottenere l'equazione della figura traslata si sostituisce nell'equazione originale:
   $$\begin{cases} x = x' - v_x \\ y = y' - v_y \end{cases}$$
-  Viceversa, per traslare un oggetto geometrico:
+  Viceversa, per un cambio di riferimento (origine spostata nel punto $(v_x, v_y)$), le nuove coordinate sono:
   $$\begin{cases} x' = x - v_x \\ y' = y - v_y \end{cases}$$
 
 - **Equazione canonica dell'ellisse con centro nell'origine:**
@@ -42,7 +42,7 @@ generato: '2026-11-07'
 
 ## Esercizio 1 (Studio di funzione e riconduzione a conica)
 
-Ddata la funzione:
+Data la funzione:
 $$y = |2 - \sqrt{25 - 4x^2}|$$
 
 Analizziamo il dominio (condizioni di esistenza):
@@ -79,7 +79,7 @@ Riscriviamo $\gamma_1$ mettendo in evidenza i denominatori desiderati:
 $$\frac{x^2}{9} + \frac{y^2}{9} = \frac{x^2}{4 \cdot \frac{9}{4}} + \frac{y^2}{25 \cdot \frac{9}{25}} = \frac{\left(\frac{x}{\frac{3}{2}}\right)^2}{4} + \frac{\left(\frac{y}{\frac{3}{5}}\right)^2}{25} = 1$$
 
 Ponendo la trasformazione:
-$$\begin{cases} x' = \frac{x}{\frac{3}{2}} \\ y' = \frac{y}{\frac{3}{5}} \end{cases} \implies \begin{cases} x = \frac{2}{3}x' \\ y = \frac{5}{3}y' \end{cases}$$
+$$\begin{cases} x' = \frac{x}{\frac{3}{2}} = \frac{2}{3}x \\ y' = \frac{y}{\frac{3}{5}} = \frac{5}{3}y \end{cases} \implies \begin{cases} x = \frac{3}{2}x' \\ y = \frac{3}{5}y' \end{cases}$$
 
 Sostituendo nell'equazione otteniamo l'equazione ridotta in forma canonica:
 $$\frac{x'^2}{4} + \frac{y'^2}{25} = 1$$
@@ -126,6 +126,6 @@ Le isometrie e le dilatazioni permettono di trasformare figure geometriche nel p
    <details><summary>Soluzione</summary>Sostituendo $x = \frac{x'}{2}$ e $y = 3y'$, si ottiene l'ellisse $\frac{x'^2}{4} + 9y'^2 = 1$.</details>
 
 ### Flashcard
-- **D:** Qual è la relazione tra le coordinate $(x,y)$ e $(x',y')$ in una traslazione con vettore $\vec{v}=(v_x, v_y)$ applicata alle coordinate? — **R:** $x = x' - v_x$ e $y = y' - v_y$.
+- **D:** Cosa si sostituisce nell'equazione di una figura per traslarla di un vettore $\vec{v}=(v_x, v_y)$? — **R:** $x = x' - v_x$ e $y = y' - v_y$.
 - **D:** Quando un'ellisse si dice in forma canonica? — **R:** Quando è centrata nell'origine e ha equazione $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$.
 - **D:** Come agisce una dilatazione di fattori $A$ e $B$ sulle coordinate $x$ e $y$? — **R:** $x' = Ax$ e $y' = By$.

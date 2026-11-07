@@ -44,7 +44,7 @@ $$T_f = \frac{C_t T_{t,i} + C_T T_{T,i}}{C_t + C_T}$$
 ---
 
 ### Secondo Principio della Termodinamica
-- **Enunciato di Clausius:** Non può esistere una trasformazione termodinamica il cui unico risultato (spontaneamente) sia il passaggio di calore da una sorgente calda ad una più fredda. In altri termini, il calore si trasferisce spontaneamente solo dal caldo al freddo.
+- **Enunciato di Clausius:** Non può esistere una trasformazione termodinamica il cui unico risultato sia il passaggio di calore da una sorgente più fredda a una più calda. In altri termini, il calore si trasferisce spontaneamente solo dal caldo al freddo.
 - **Enunciato di Kelvin:** Non esiste una trasformazione termodinamica il cui unico risultato sia la trasformazione integrale di calore in lavoro. Ogni processo che converte calore in lavoro deve sempre avere delle perdite di calore.
 
 ---

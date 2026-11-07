@@ -65,7 +65,7 @@ $$\text{Area sotto la parabola} = \int_{0}^{x_A} x^2 \, dx = \left[ \frac{x^3}{3
 Area del rettangolo circoscritto di lati $x_A$ e $x_A^2$:
 $$\text{Area rettangolo} = x_A \cdot x_A^2 = x_A^3$$
 
-Area compresa tra la retta e la parabola (SP):
+Area compresa tra la parabola, l'asse $y$ e la retta $y = x_A^2$ (SP):
 $$\text{SP} = x_A^3 - \int_{0}^{x_A} x^2 \, dx = x_A^3 - \frac{x_A^3}{3} = \frac{2}{3} x_A^3$$
 
 ---
