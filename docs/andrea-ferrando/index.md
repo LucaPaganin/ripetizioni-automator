@@ -2,6 +2,9 @@
 
 | Data | Materia | Lezione | Esercizi |
 |---|---|---|---|
+| 2026-11-02 | fisica | [Principi della Termodinamica e Ciclo di Carnot](2026-11-02-principi-termodinamica-ciclo-di-carnot.md) | 1 |
+| 2026-09-17 |  | [2026-09-17-Nota-18-04](2026-09-17-2026-09-17-nota-18-04.md) |  |
+| 2026-09-04 | matematica | [Grafici di funzioni esponenziali e trasformazioni geometriche](2026-09-04-grafici-funzioni-esponenziali-trasformazioni.md) |  |
 | 2026-07-22 | matematica | [Equazioni esponenziali](2026-07-22-equazioni-esponenziali.md) | 30, 31 |
 | 2026-07-17 | matematica | [Funzioni esponenziali, equazioni, disequazioni e logaritmi](2026-07-17-funzioni-esponenziali-equazioni-disequazioni-logaritmi.md) |  |
 | 2026-07-10 | matematica | [Programmazione didattica di Matematica - Classe 3T](2026-07-10-programmazione-didattica-matematica-classe-3t.md) |  |
@@ -15,6 +18,7 @@
 | 2026-04-18 |  | [Formulario 2026-04-18](2026-04-18-formulario-2026-04-18.md) |  |
 | 2026-04-18 | matematica | [Geometria Analitica e Calcolo Integrale: Circonferenza e Parabola](2026-04-18-geometria-analitica-calcolo-integrale.md) |  |
 | 2026-04-11 | matematica | [Iperbole: Forma Canonica e Vertici Immaginari](2026-04-11-iperbole-forma-canonica-vertici-immaginari.md) |  |
+| 2026-04-04 | matematica | [Equazioni delle ellissi: vertice ed eccentricità](2026-04-04-equazioni-ellissi-vertice-eccentricita.md) | 150, 138 |
 | 2026-04-03 |  | [2026-04-03](2026-04-03-2026-04-03.md) |  |
 | 2026-04-01 | matematica | [Frazioni algebriche, potenze ed equazioni](2026-04-01-frazioni-algebriche-potenze-ed-equazioni.md) | 2, 3, 4 |
 | 2026-03-28 | matematica | [Intersezioni tra rette ed ellissi e problemi di corda](2026-03-28-intersezioni-rette-ellissi-problemi-di-corda.md) | 82, 88, 89 |
@@ -35,13 +39,13 @@
 
 ## Per argomento
 
-- **Altro**: [2026-04-18](2026-04-18-formulario-2026-04-18.md), [2026-04-03](2026-04-03-2026-04-03.md), [2026-01-24](2026-01-24-2026-01-24.md)
+- **Altro**: [2026-09-17](2026-09-17-2026-09-17-nota-18-04.md), [2026-04-18](2026-04-18-formulario-2026-04-18.md), [2026-04-03](2026-04-03-2026-04-03.md), [2026-01-24](2026-01-24-2026-01-24.md)
 - **Dinamica dei sistemi e urti**: [2026-01-22](2026-01-22-impulso-forza-urti-1d-elastici-centro-massa.md)
 - **Dinamica e Urti**: [2026-01-21](2026-01-21-urti-1d-2d-quantita-moto-energia-cinetica.md)
 - **Dinamica rotazionale**: [2026-02-20](2026-02-20-dinamica-punto-materiale-e-corpo-rigido.md)
 - **Esponenziali e Logaritmi**: [2026-07-17](2026-07-17-funzioni-esponenziali-equazioni-disequazioni-logaritmi.md), [2026-05-04](2026-05-04-funzioni-esponenziali-e-logaritmi.md)
 - **Frazioni algebriche e potenze**: [2026-04-01](2026-04-01-frazioni-algebriche-potenze-ed-equazioni.md)
-- **Geometria analitica**: [2026-05-25](2026-05-25-iperbole-e-funzione-omografica.md), [2026-04-27](2026-04-27-studio-funzione-radicali-geometria-analitica-circonferenza.md), [2026-04-22](2026-04-22-isometrie-e-dilatazioni-piano-cartesiano.md), [2026-04-11](2026-04-11-iperbole-forma-canonica-vertici-immaginari.md), [2026-03-13](2026-03-13-traslazioni-coniche-e-applicazione-circonferenze.md), [2026-02-02](2026-02-02-geometria-analitica-rette-tangenti-parabola.md)
+- **Geometria analitica**: [2026-05-25](2026-05-25-iperbole-e-funzione-omografica.md), [2026-04-27](2026-04-27-studio-funzione-radicali-geometria-analitica-circonferenza.md), [2026-04-22](2026-04-22-isometrie-e-dilatazioni-piano-cartesiano.md), [2026-04-11](2026-04-11-iperbole-forma-canonica-vertici-immaginari.md), [2026-04-04](2026-04-04-equazioni-ellissi-vertice-eccentricita.md), [2026-03-13](2026-03-13-traslazioni-coniche-e-applicazione-circonferenze.md), [2026-02-02](2026-02-02-geometria-analitica-rette-tangenti-parabola.md)
 - **Geometria analitica e Analisi matematica**: [2026-02-11](2026-02-11-circonferenza-parametrica-iniettivita-invertibilita.md)
 - **Geometria analitica nel piano cartesiano**: [2026-03-18](2026-03-18-geometria-analitica-parabole-tangenti-problemi.md)
 - **Geometria analitica: l'ellisse**: [2026-03-28](2026-03-28-intersezioni-rette-ellissi-problemi-di-corda.md)
@@ -50,7 +54,8 @@
 - **Orbite e Leggi di Keplero**: [2026-03-12](2026-03-12-geometria-ellisse-eccentricita.md)
 - **Programmazione didattica annuale**: [2026-07-10](2026-07-10-programmazione-didattica-matematica-classe-3t.md)
 - **Studio di funzione**: [2026-01-27](2026-01-27-studio-di-funzione-con-radice-e-disequazioni-irrazionali.md)
-- **Termodinamica**: [2026-05-18](2026-05-18-modello-microscopico-temperatura-termodinamica.md)
+- **Studio di funzioni esponenziali e trasformazioni geometriche elementari**: [2026-09-04](2026-09-04-grafici-funzioni-esponenziali-trasformazioni.md)
+- **Termodinamica**: [2026-11-02](2026-11-02-principi-termodinamica-ciclo-di-carnot.md), [2026-05-18](2026-05-18-modello-microscopico-temperatura-termodinamica.md)
 - **Vettori, Prodotto scalare e vettoriale, Urti elastici**: [2026-01-21](2026-01-21-vettori-e-conservazione-quantita-di-moto.md)
 - **esponenziali**: [2026-07-22](2026-07-22-equazioni-esponenziali.md)
 - **geometria analitica e calcolo integrale**: [2026-04-18](2026-04-18-geometria-analitica-calcolo-integrale.md)
@@ -74,8 +79,10 @@
 - Confondere la condizione di esistenza del raggio con quella della circonferenza degenere
 - Confondere la dinamica lineare con quella rotazionale
 - Confondere la distanza al perielio e all'apoforo con il semiasse maggiore
+- Confondere la posizione dell'asse maggiore rispetto all'asse x o y
 - Confondere la trasformazione degli assi con la trasformazione degli oggetti
 - Confondere la traslazione degli assi con la traslazione del vettore della figura geometrica
+- Confusione con i segni del calore e del lavoro
 - Conservare la velocità iniziale in un urto elastico senza considerare le masse
 - Considerare intersezioni con l'asse y per un'iperbole con fuochi sull'asse x senza considerare i numeri complessi
 - Dimenticare che l'argomento di un logaritmo deve sempre essere positivo
@@ -87,3 +94,4 @@
 - Errata applicazione delle proprietà delle potenze nel prodotto tra esponenti
 - Non considerare il valore assoluto o le condizioni di accettabilità (es. $d > 0$) per i parametri geometrici.
 - Sbagliare il segno del vettore di traslazione quando si spostano gli assi
+- Scambiare il semiasse maggiore con quello minore nell'impostare l'equazione dell'ellisse
