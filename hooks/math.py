@@ -31,9 +31,20 @@ _TOKEN = re.compile(r"KMATH([0-9a-f]{12})X")
 _DETAILS = re.compile(r"<details(?![^>]*\bmarkdown=)([^>]*)>")
 
 
+# Esponente/pedice subito dopo uno spazio (es. "273,15 \\, ^\\circ C"): LaTeX valido, ma KaTeX
+# lo rifiuta ("Got group of unknown type: 'internal'"). Un gruppo vuoto {} risolve.
+_SPACE_SCRIPT = re.compile(r"(\\(?:[,;:!> ]|q?quad)|~)\s*(?=[\^_])")
+
+
+def fix_tex(tex: str) -> str:
+    """Correzioni deterministiche per differenze tra LaTeX e KaTeX."""
+    return _SPACE_SCRIPT.sub(r"\1{}", tex.strip())
+
+
 def _stash(tex: str, display: bool) -> str:
+    tex = fix_tex(tex)
     key = hashlib.sha1(f"{display}{tex}".encode()).hexdigest()[:12]
-    _MATH[key] = (tex.strip(), display)
+    _MATH[key] = (tex, display)
     return f"KMATH{key}X"
 
 

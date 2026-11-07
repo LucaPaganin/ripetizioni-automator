@@ -172,13 +172,29 @@ def gemini():
     return _client, os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
 
 
+def generate(**kwargs):
+    """generate_content con nuovi tentativi sugli errori temporanei di Gemini
+    (500/503/504, es. "model is currently experiencing high demand")."""
+    from google.genai import errors
+
+    client, model = gemini()
+    waits = [30, 90]
+    for attempt in range(len(waits) + 1):
+        try:
+            return client.models.generate_content(model=model, **kwargs)
+        except errors.APIError as e:
+            if getattr(e, "code", None) not in (500, 503, 504) or attempt == len(waits):
+                raise
+            print(f"  Gemini non disponibile ({e.code}), riprovo tra {waits[attempt]}s")
+            time.sleep(waits[attempt])
+
+
 def transcribe(pdf: bytes) -> str:
     from google.genai import types, errors
 
-    client, model = gemini()
+    _, model = gemini()
     try:
-        resp = client.models.generate_content(
-            model=model,
+        resp = generate(
             contents=[types.Part.from_bytes(data=pdf, mime_type="application/pdf"), PROMPT],
             config=types.GenerateContentConfig(temperature=0.2),
         )
@@ -209,7 +225,7 @@ def extract_math(md: str) -> list[tuple[str, bool]]:
     found: list[tuple[str, bool]] = []
     text = hook._CODE.sub("", md)
     for rx, display in hook._PATTERNS:
-        found += [(m.group(1).strip(), display) for m in rx.finditer(text)]
+        found += [(hook.fix_tex(m.group(1)), display) for m in rx.finditer(text)]
         text = rx.sub(" ", text)  # come nel hook: una formula non viene riletta dal pattern successivo
     return found
 
@@ -252,9 +268,7 @@ def repair_math(md: str, rounds: int = 2) -> str:
             return md
         print(f"  {len(bad)} formule non valide, chiedo la correzione a Gemini")
         try:
-            client, model = gemini()
-            resp = client.models.generate_content(
-                model=model,
+            resp = generate(
                 contents=[REPAIR_PROMPT + json.dumps(bad, ensure_ascii=False, indent=1)],
                 config=types.GenerateContentConfig(temperature=0, response_mime_type="application/json"),
             )
