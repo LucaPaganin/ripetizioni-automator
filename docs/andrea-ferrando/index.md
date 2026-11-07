@@ -2,6 +2,21 @@
 
 | Data | Materia | Lezione | Esercizi |
 |---|---|---|---|
+| 2026-07-22 | matematica | [Equazioni esponenziali](2026-07-22-equazioni-esponenziali.md) | 30, 31 |
+| 2026-07-17 | matematica | [Funzioni esponenziali, equazioni, disequazioni e logaritmi](2026-07-17-funzioni-esponenziali-equazioni-disequazioni-logaritmi.md) |  |
+| 2026-07-10 | matematica | [Programmazione didattica di Matematica - Classe 3T](2026-07-10-programmazione-didattica-matematica-classe-3t.md) |  |
+| 2026-05-25 | matematica | [Iperbole e funzione omografica](2026-05-25-iperbole-e-funzione-omografica.md) |  |
+| 2026-05-18 | fisica | [Modello microscopico della temperatura e primo principio della termodinamica](2026-05-18-modello-microscopico-temperatura-termodinamica.md) |  |
+| 2026-05-11 | matematica | [Studio e trasformazioni di funzioni esponenziali](2026-05-11-studio-e-trasformazioni-di-funzioni-esponenziali.md) | 80, 82, 84, 85 |
+| 2026-05-04 | matematica | [Funzioni esponenziali e logaritmi](2026-05-04-funzioni-esponenziali-e-logaritmi.md) |  |
+| 2026-04-29 | fisica | [Gas perfetti, leggi dei gas e analisi dimensionale](2026-04-29-gas-perfetti-leggi-gas-analisi-dimensionale.md) |  |
+| 2026-04-27 | matematica | [Studio di funzione con radicali e geometria analitica della circonferenza](2026-04-27-studio-funzione-radicali-geometria-analitica-circonferenza.md) | 1, 2 |
+| 2026-04-22 | matematica | [Isometrie e Dilatazioni nel Piano Cartesiano](2026-04-22-isometrie-e-dilatazioni-piano-cartesiano.md) | 1, 2, 3, 4 |
+| 2026-04-18 |  | [Formulario 2026-04-18](2026-04-18-formulario-2026-04-18.md) |  |
+| 2026-04-18 | matematica | [Geometria Analitica e Calcolo Integrale: Circonferenza e Parabola](2026-04-18-geometria-analitica-calcolo-integrale.md) |  |
+| 2026-04-11 | matematica | [Iperbole: Forma Canonica e Vertici Immaginari](2026-04-11-iperbole-forma-canonica-vertici-immaginari.md) |  |
+| 2026-04-03 |  | [2026-04-03](2026-04-03-2026-04-03.md) |  |
+| 2026-04-01 | matematica | [Frazioni algebriche, potenze ed equazioni](2026-04-01-frazioni-algebriche-potenze-ed-equazioni.md) | 2, 3, 4 |
 | 2026-03-28 | matematica | [Intersezioni tra rette ed ellissi e problemi di corda](2026-03-28-intersezioni-rette-ellissi-problemi-di-corda.md) | 82, 88, 89 |
 | 2026-03-18 | matematica | [Geometria analitica: parabole, tangenti e problemi con rettangoli iscritti](2026-03-18-geometria-analitica-parabole-tangenti-problemi.md) | 5, 6 |
 | 2026-03-13 | matematica | [Traslazioni coniche e applicazione a circonferenze](2026-03-13-traslazioni-coniche-e-applicazione-circonferenze.md) | 73 |
@@ -20,19 +35,27 @@
 
 ## Per argomento
 
-- **Altro**: [2026-01-24](2026-01-24-2026-01-24.md)
+- **Altro**: [2026-04-18](2026-04-18-formulario-2026-04-18.md), [2026-04-03](2026-04-03-2026-04-03.md), [2026-01-24](2026-01-24-2026-01-24.md)
 - **Dinamica dei sistemi e urti**: [2026-01-22](2026-01-22-impulso-forza-urti-1d-elastici-centro-massa.md)
 - **Dinamica e Urti**: [2026-01-21](2026-01-21-urti-1d-2d-quantita-moto-energia-cinetica.md)
 - **Dinamica rotazionale**: [2026-02-20](2026-02-20-dinamica-punto-materiale-e-corpo-rigido.md)
-- **Geometria analitica**: [2026-03-13](2026-03-13-traslazioni-coniche-e-applicazione-circonferenze.md), [2026-02-02](2026-02-02-geometria-analitica-rette-tangenti-parabola.md)
+- **Esponenziali e Logaritmi**: [2026-07-17](2026-07-17-funzioni-esponenziali-equazioni-disequazioni-logaritmi.md), [2026-05-04](2026-05-04-funzioni-esponenziali-e-logaritmi.md)
+- **Frazioni algebriche e potenze**: [2026-04-01](2026-04-01-frazioni-algebriche-potenze-ed-equazioni.md)
+- **Geometria analitica**: [2026-05-25](2026-05-25-iperbole-e-funzione-omografica.md), [2026-04-27](2026-04-27-studio-funzione-radicali-geometria-analitica-circonferenza.md), [2026-04-22](2026-04-22-isometrie-e-dilatazioni-piano-cartesiano.md), [2026-04-11](2026-04-11-iperbole-forma-canonica-vertici-immaginari.md), [2026-03-13](2026-03-13-traslazioni-coniche-e-applicazione-circonferenze.md), [2026-02-02](2026-02-02-geometria-analitica-rette-tangenti-parabola.md)
 - **Geometria analitica e Analisi matematica**: [2026-02-11](2026-02-11-circonferenza-parametrica-iniettivita-invertibilita.md)
 - **Geometria analitica nel piano cartesiano**: [2026-03-18](2026-03-18-geometria-analitica-parabole-tangenti-problemi.md)
 - **Geometria analitica: l'ellisse**: [2026-03-28](2026-03-28-intersezioni-rette-ellissi-problemi-di-corda.md)
 - **Geometria analitica: parabola e rette tangenti**: [2026-03-03](2026-03-03-esercizio-194-segmenti-parabolici-e-rette-tangenti.md)
 - **Gravitazione**: [2026-02-13](2026-02-13-gravitazione-universale-e-leggi-di-keplero.md)
 - **Orbite e Leggi di Keplero**: [2026-03-12](2026-03-12-geometria-ellisse-eccentricita.md)
+- **Programmazione didattica annuale**: [2026-07-10](2026-07-10-programmazione-didattica-matematica-classe-3t.md)
 - **Studio di funzione**: [2026-01-27](2026-01-27-studio-di-funzione-con-radice-e-disequazioni-irrazionali.md)
+- **Termodinamica**: [2026-05-18](2026-05-18-modello-microscopico-temperatura-termodinamica.md)
 - **Vettori, Prodotto scalare e vettoriale, Urti elastici**: [2026-01-21](2026-01-21-vettori-e-conservazione-quantita-di-moto.md)
+- **esponenziali**: [2026-07-22](2026-07-22-equazioni-esponenziali.md)
+- **geometria analitica e calcolo integrale**: [2026-04-18](2026-04-18-geometria-analitica-calcolo-integrale.md)
+- **grafici di funzioni esponenziali e trasformazioni geometriche**: [2026-05-11](2026-05-11-studio-e-trasformazioni-di-funzioni-esponenziali.md)
+- **termodinamica**: [2026-04-29](2026-04-29-gas-perfetti-leggi-gas-analisi-dimensionale.md)
 - **termologia**: [2026-02-16](2026-02-16-calore-e-capacita-termica.md)
 
 ## Errori ricorrenti
@@ -40,16 +63,27 @@
 - Accettare soluzioni cinematiche prive di significato fisico come velocità finali identiche a quelle iniziali senza urto
 - Applicare l'invertibilità a funzioni non iniettive senza limitare il dominio
 - Applicare le formule del moto rotatorio partendo da velocità iniziale nulla quando il testo specifica che il corpo è già in moto
+- Applicare le trasformazioni nell'ordine errato anziché seguire la composizione di funzioni
+- Applicare scorrettamente la proprietà della potenza negativa
+- Basi negative con esponenti non interi (es. $(-1)^\pi$ non ha senso)
 - Confondere i punti di intersezione delle tangenti con gli estremi dei segmenti parabolici.
 - Confondere il prodotto scalare (risultato scalare) con il prodotto vettoriale (risultato vettore)
+- Confondere l'inversione del verso di una disequazione logaritmica o esponenziale quando la base è compresa tra 0 e 1.
+- Confondere l'iperbole con fuochi sull'asse x con quella con fuochi sull'asse y
 - Confondere l'uso delle C.E. nelle equazioni irrazionali (per accettabilità) rispetto alle disequazioni (per impostare il sistema)
 - Confondere la condizione di esistenza del raggio con quella della circonferenza degenere
 - Confondere la dinamica lineare con quella rotazionale
 - Confondere la distanza al perielio e all'apoforo con il semiasse maggiore
+- Confondere la trasformazione degli assi con la trasformazione degli oggetti
 - Confondere la traslazione degli assi con la traslazione del vettore della figura geometrica
 - Conservare la velocità iniziale in un urto elastico senza considerare le masse
+- Considerare intersezioni con l'asse y per un'iperbole con fuochi sull'asse x senza considerare i numeri complessi
+- Dimenticare che l'argomento di un logaritmo deve sempre essere positivo
+- Dimenticare che un'equazione non ridotta in forma canonica non permette di leggere direttamente i semiassi
+- Dimenticare di escludere le soluzioni che annullano il denominatore nelle C.E.
 - Dimenticare di specificare su quale corpo agisce l'impulso e di chi è la variazione di quantità di moto
 - Dimenticare il dominio di esistenza del radicale (C.E.) quando si parametrizzano le intersezioni con rette parallele
 - Dimenticare le condizioni di esistenza (C.E.) nello studio del segno
+- Errata applicazione delle proprietà delle potenze nel prodotto tra esponenti
 - Non considerare il valore assoluto o le condizioni di accettabilità (es. $d > 0$) per i parametri geometrici.
 - Sbagliare il segno del vettore di traslazione quando si spostano gli assi
