@@ -35,6 +35,9 @@ jobs:
 
       - run: pip install -r pipeline/requirements.txt
 
+      # KaTeX per validare le formule trascritte (stesso motore del sito).
+      - run: npm ci --prefix pipeline --no-audit --no-fund
+
       # Credenziali GCP a vita breve via OIDC (Workload Identity Federation): nessuna chiave JSON.
       - uses: google-github-actions/auth@v2
         with:
@@ -47,6 +50,7 @@ jobs:
           DRIVE_ROOT_ID: ${{ vars.DRIVE_ROOT_ID }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           MAX_FILES: ${{ inputs.max_files || '15' }}
+          PYTHONUNBUFFERED: "1" # progresso visibile in tempo reale nei log
         run: python pipeline/sync.py
 
       - name: Commit

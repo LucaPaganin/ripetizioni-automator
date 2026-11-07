@@ -156,9 +156,10 @@ class ConfigError(Exception):
 _client = None
 
 
-def transcribe(pdf: bytes) -> str:
+def gemini():
+    """Client Gemini condiviso e nome del modello."""
     from google import genai
-    from google.genai import types, errors
+    from google.genai import types
 
     global _client
     if _client is None:
@@ -168,9 +169,15 @@ def transcribe(pdf: bytes) -> str:
             api_key=os.environ["GEMINI_API_KEY"],
             http_options=types.HttpOptions(api_version="v1beta"),
         )
-    model = os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
+    return _client, os.environ.get("GEMINI_MODEL") or "gemini-flash-latest"
+
+
+def transcribe(pdf: bytes) -> str:
+    from google.genai import types, errors
+
+    client, model = gemini()
     try:
-        resp = _client.models.generate_content(
+        resp = client.models.generate_content(
             model=model,
             contents=[types.Part.from_bytes(data=pdf, mime_type="application/pdf"), PROMPT],
             config=types.GenerateContentConfig(temperature=0.2),
@@ -183,6 +190,99 @@ def transcribe(pdf: bytes) -> str:
             raise ConfigError(f"modello '{model}': {e}") from e
         raise
     return resp.text or ""
+
+
+# ---------------------------------------------------------------- formule
+
+def _math_hook():
+    """Il modulo hooks/math.py del sito: stessa estrazione delle formule usata in build."""
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("site_math", ROOT / "hooks" / "math.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def extract_math(md: str) -> list[tuple[str, bool]]:
+    hook = _math_hook()
+    found: list[tuple[str, bool]] = []
+    text = hook._CODE.sub("", md)
+    for rx, display in hook._PATTERNS:
+        found += [(m.group(1).strip(), display) for m in rx.finditer(text)]
+        text = rx.sub(" ", text)  # come nel hook: una formula non viene riletta dal pattern successivo
+    return found
+
+
+def invalid_math(md: str) -> list[dict] | None:
+    """Formule che KaTeX non riesce a renderizzare. None se il validatore non è disponibile."""
+    import subprocess
+
+    formulas = list(dict.fromkeys(extract_math(md)))
+    if not formulas:
+        return []
+    try:
+        out = subprocess.run(
+            ["node", str(ROOT / "pipeline" / "check_math.js")],
+            input=json.dumps(formulas), capture_output=True, text=True, check=True, timeout=120,
+        )
+    except (OSError, subprocess.SubprocessError) as e:
+        print(f"  validatore formule non disponibile ({e}); salto il controllo", file=sys.stderr)
+        return None
+    return json.loads(out.stdout)
+
+
+REPAIR_PROMPT = """Queste formule LaTeX, prese da appunti di matematica trascritti, non sono valide per KaTeX.
+Per ciascuna scrivi la versione corretta che esprime la stessa cosa usando solo comandi supportati da KaTeX
+(es. una macro inesistente va sostituita col simbolo standard che il contesto suggerisce).
+Non cambiare il contenuto matematico. Rispondi SOLO con un array JSON di oggetti
+{"originale": "<formula esatta ricevuta>", "corretta": "<formula corretta>"}.
+
+Formule ed errori:
+"""
+
+
+def repair_math(md: str, rounds: int = 2) -> str:
+    """Fa correggere a Gemini solo le formule non valide e applica le correzioni che passano KaTeX."""
+    from google.genai import types
+
+    for _ in range(rounds):
+        bad = invalid_math(md)
+        if not bad:
+            return md
+        print(f"  {len(bad)} formule non valide, chiedo la correzione a Gemini")
+        try:
+            client, model = gemini()
+            resp = client.models.generate_content(
+                model=model,
+                contents=[REPAIR_PROMPT + json.dumps(bad, ensure_ascii=False, indent=1)],
+                config=types.GenerateContentConfig(temperature=0, response_mime_type="application/json"),
+            )
+            fixes = json.loads(resp.text or "[]")
+        except Exception as e:  # la pagina si salva comunque: KaTeX mostra in rosso solo la formula rotta
+            print(f"  correzione formule non riuscita: {e}", file=sys.stderr)
+            return md
+        wanted = {b["tex"] for b in bad}
+        for fix in fixes if isinstance(fixes, list) else []:
+            orig, new = str(fix.get("originale", "")).strip(), str(fix.get("corretta", "")).strip()
+            if orig in wanted and new and new != orig:
+                md = md.replace(orig, new)
+    return md
+
+
+def report_math() -> None:
+    """Riepilogo a fine run: formule ancora non valide nel sito, come warning di GitHub Actions."""
+    total = 0
+    for page in sorted(DOCS.glob("*/*.md")):
+        if page.name == "index.md":
+            continue
+        bad = invalid_math(page.read_text(encoding="utf-8"))
+        if bad is None:
+            return
+        for b in bad:
+            total += 1
+            print(f"::warning file={page.relative_to(ROOT)}::Formula non valida: {b['tex'][:120]} ({b['error'][:160]})")
+    print(f"Controllo formule: {total} non valide nel sito.")
 
 
 # ---------------------------------------------------------------- indici
@@ -270,6 +370,7 @@ def main() -> int:
             continue
 
         meta, body = split_frontmatter(md)
+        body = repair_math(body)
         if not body.strip():
             print("  risposta vuota, salto", file=sys.stderr)
             continue
@@ -298,6 +399,7 @@ def main() -> int:
         time.sleep(int(os.environ.get("SLEEP_SECONDS") or 15))  # gentile col free tier
 
     write_indexes()
+    report_math()
     print(f"Fatto: {processed} PDF elaborati.")
     return 0
 

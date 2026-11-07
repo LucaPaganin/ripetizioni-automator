@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "description": "Validazione delle formule con lo stesso KaTeX del sito (vedi check_math.js)",
+  "dependencies": { "katex": "0.16.11" }
+}

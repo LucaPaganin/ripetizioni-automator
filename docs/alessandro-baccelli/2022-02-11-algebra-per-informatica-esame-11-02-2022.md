@@ -59,7 +59,7 @@ $$z = \boxed{15\sqrt{2}e^{i\frac{\pi}{4}}}$$
 
 ## Esercizio 2
 
-Si consideri l'insieme $A = \{2, 4, 5, 20, 25, 100\}$ con la relazione d'ordine $a \ml_b \iff a \mid b$. Si determinino massimo, minimo, elementi minimali ed elementi massimali di $A$.
+Si consideri l'insieme $A = \{2, 4, 5, 20, 25, 100\}$ con la relazione d'ordine $a \preceq b \iff a \mid b$. Si determinino massimo, minimo, elementi minimali ed elementi massimali di $A$.
 
 **Soluzione:**
 Il diagramma di Hasse del poset $A$ (con ordine dal basso verso l'alto) è:

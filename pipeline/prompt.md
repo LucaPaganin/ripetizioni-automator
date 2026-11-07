@@ -28,4 +28,6 @@ Regole:
 - Se trovi un errore matematico negli appunti, trascrivilo com'è e aggiungi subito dopo una nota `> ⚠️ Nota: ...` con la correzione.
 - Verifica i calcoli degli esercizi simili prima di scriverli.
 - Le pagine vuote o con solo righe del quaderno vanno ignorate.
+- Usa solo comandi LaTeX standard supportati da KaTeX (niente macro inventate o personalizzate).
+- Lascia una riga vuota prima di ogni elenco puntato o numerato.
 - Rispondi SOLO con il Markdown, senza blocchi ```markdown attorno.
