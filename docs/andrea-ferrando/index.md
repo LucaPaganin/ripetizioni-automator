@@ -2,6 +2,8 @@
 
 | Data | Materia | Lezione | Esercizi |
 |---|---|---|---|
+| 2026-11-09 | fisica | [Termodinamica: Ciclo Termodinamico e Rendimento](2026-11-09-termodinamica-ciclo-termodinamico-rendimento.md) | 2 |
+| 2026-11-03 | fisica | [Verifica di Fisica sulla Termodinamica](2026-11-03-verifica-di-fisica-termodinamica.md) | 1, 2, 3, 4, 5, 6 |
 | 2026-11-02 | fisica | [Principi della Termodinamica e Ciclo di Carnot](2026-11-02-principi-termodinamica-ciclo-di-carnot.md) | 1 |
 | 2026-09-17 | matematica | [Proprietà dei logaritmi, cambio di base ed esercizi](2026-09-17-2026-09-17-nota-18-04.md) | 360, 363, 364 |
 | 2026-09-04 | matematica | [Grafici di funzioni esponenziali e trasformazioni geometriche](2026-09-04-grafici-funzioni-esponenziali-trasformazioni.md) |  |
@@ -57,7 +59,7 @@
 - **Programmazione didattica annuale**: [2026-07-10](2026-07-10-programmazione-didattica-matematica-classe-3t.md)
 - **Studio di funzione**: [2026-01-27](2026-01-27-studio-di-funzione-con-radice-e-disequazioni-irrazionali.md)
 - **Studio di funzioni esponenziali e trasformazioni geometriche elementari**: [2026-09-04](2026-09-04-grafici-funzioni-esponenziali-trasformazioni.md)
-- **Termodinamica**: [2026-11-02](2026-11-02-principi-termodinamica-ciclo-di-carnot.md), [2026-05-18](2026-05-18-modello-microscopico-temperatura-termodinamica.md)
+- **Termodinamica**: [2026-11-09](2026-11-09-termodinamica-ciclo-termodinamico-rendimento.md), [2026-11-03](2026-11-03-verifica-di-fisica-termodinamica.md), [2026-11-02](2026-11-02-principi-termodinamica-ciclo-di-carnot.md), [2026-05-18](2026-05-18-modello-microscopico-temperatura-termodinamica.md)
 - **Vettori, Prodotto scalare e vettoriale, Urti elastici**: [2026-01-21](2026-01-21-vettori-e-conservazione-quantita-di-moto.md)
 - **esponenziali**: [2026-07-22](2026-07-22-equazioni-esponenziali.md)
 - **geometria analitica e calcolo integrale**: [2026-04-18](2026-04-18-geometria-analitica-calcolo-integrale.md)
@@ -78,6 +80,7 @@
 - Confondere $(\ln x)^2$ con $\ln(x^2)$
 - Confondere i punti di intersezione delle tangenti con gli estremi dei segmenti parabolici.
 - Confondere il prodotto scalare (risultato scalare) con il prodotto vettoriale (risultato vettore)
+- Confondere il segno del calore ceduto al termostato freddo
 - Confondere l'inversione del verso di una disequazione logaritmica o esponenziale quando la base è compresa tra 0 e 1.
 - Confondere l'iperbole con fuochi sull'asse x con quella con fuochi sull'asse y
 - Confondere l'uso delle C.E. nelle equazioni irrazionali (per accettabilità) rispetto alle disequazioni (per impostare il sistema)
@@ -92,6 +95,7 @@
 - Considerare intersezioni con l'asse y per un'iperbole con fuochi sull'asse x senza considerare i numeri complessi
 - Dimenticare che l'argomento di un logaritmo deve sempre essere positivo
 - Dimenticare che un'equazione non ridotta in forma canonica non permette di leggere direttamente i semiassi
+- Dimenticare di convertire i volumi in metri cubi ($\text{m}^3$) e la pressione in Pascal ($\text{Pa}$)
 - Dimenticare di escludere le soluzioni che annullano il denominatore nelle C.E.
 - Dimenticare di porre la condizione di esistenza del parametro $t = m^2 \ge 0$ quando si risolvono equazioni parametriche nel fascio di rette
 - Dimenticare di specificare su quale corpo agisce l'impulso e di chi è la variazione di quantità di moto
