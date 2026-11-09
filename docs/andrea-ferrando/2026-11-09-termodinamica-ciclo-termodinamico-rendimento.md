@@ -93,12 +93,11 @@ Dal primo principio, ricaviamo il calore assorbito $Q_1$:
 $$Q_1 + Q_2 - L = 0 \implies Q_1 = L_{\text{ciclo}} - Q_2 \text{ (considerando i moduli o la conservazione)}$$
 Più precisamente, sapendo che $L = Q_1 + Q_2$ (con $Q_2$ negativo):
 $$Q_1 = L_{\text{ciclo}} + |Q_2| = 750\text{ J} + 1800\text{ J} = 2550\text{ J}$$
-*(Nota: negli appunti viene calcolato $Q_1 = L - Q_2 = 1250 - (-1800) = 3050\text{ J}$ usando un valore di lavoro parziale. Usando $L_{\text{ciclo}} = 750\text{ J}$, si ha $Q_1 = 750 + 1800 = 2550\text{ J}$. Seguiamo la traccia degli appunti per il rendimento numerico basato sui dati impostati):*
+Usando $L_{\text{ciclo}} = 750\text{ J}$, si ha $Q_1 = 750 + 1800 = 2550\text{ J}$. 
 
-Negli appunti viene impostato:
-$$Q_1 = 1250 - (-1800) = 3050\text{ J}$$
+
 Quindi il rendimento $\eta$ è:
-$$\eta = \frac{L}{Q_1} = \frac{1250\text{ J}}{3050\text{ J}} \approx 0,4098 \implies \boxed{41\%}$$
+$$\eta = \frac{L}{Q_1} = \frac{750\text{ J}}{2550\text{ J}} \approx 0,2941 \implies \boxed{29\%}$$
 
 ---
 
