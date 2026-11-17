@@ -2,6 +2,7 @@
 
 | Data | Materia | Lezione | Esercizi |
 |---|---|---|---|
+| 2026-11-17 | fisica | [Secondo principio della termodinamica ed entropia](2026-11-17-secondo-principio-termodinamica-entropia.md) | 3 |
 | 2026-11-09 | fisica | [Termodinamica: Ciclo Termodinamico e Rendimento](2026-11-09-termodinamica-ciclo-termodinamico-rendimento.md) | 2 |
 | 2026-11-03 | fisica | [Verifica di Fisica sulla Termodinamica](2026-11-03-verifica-di-fisica-termodinamica.md) | 1, 2, 3, 4, 5, 6 |
 | 2026-11-02 | fisica | [Principi della Termodinamica e Ciclo di Carnot](2026-11-02-principi-termodinamica-ciclo-di-carnot.md) | 1 |
@@ -64,7 +65,7 @@
 - **esponenziali**: [2026-07-22](2026-07-22-equazioni-esponenziali.md)
 - **geometria analitica e calcolo integrale**: [2026-04-18](2026-04-18-geometria-analitica-calcolo-integrale.md)
 - **grafici di funzioni esponenziali e trasformazioni geometriche**: [2026-05-11](2026-05-11-studio-e-trasformazioni-di-funzioni-esponenziali.md)
-- **termodinamica**: [2026-04-29](2026-04-29-gas-perfetti-leggi-gas-analisi-dimensionale.md)
+- **termodinamica**: [2026-11-17](2026-11-17-secondo-principio-termodinamica-entropia.md), [2026-04-29](2026-04-29-gas-perfetti-leggi-gas-analisi-dimensionale.md)
 - **termologia**: [2026-02-16](2026-02-16-calore-e-capacita-termica.md)
 
 ## Errori ricorrenti
@@ -81,6 +82,7 @@
 - Confondere i punti di intersezione delle tangenti con gli estremi dei segmenti parabolici.
 - Confondere il prodotto scalare (risultato scalare) con il prodotto vettoriale (risultato vettore)
 - Confondere il segno del calore ceduto al termostato freddo
+- Confondere il verso del calore ceduto e assorbito nei bilanci energetici
 - Confondere l'inversione del verso di una disequazione logaritmica o esponenziale quando la base è compresa tra 0 e 1.
 - Confondere l'iperbole con fuochi sull'asse x con quella con fuochi sull'asse y
 - Confondere l'uso delle C.E. nelle equazioni irrazionali (per accettabilità) rispetto alle disequazioni (per impostare il sistema)
